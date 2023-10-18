@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tree Diagram Syntax - BELAJAR</title>
+    <meta name="description" content="Tree Diagram Syntax, , , , , , , 0, , , , , , 0, tree-diagram-syntax, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tree Diagram Syntax - BELAJAR" />
+    <meta property="og:description" content="Tree Diagram Syntax, , , , , , , 0, , , , , , 0, tree-diagram-syntax, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tree Diagram Syntax - BELAJAR" />
+    <meta name="twitter:description" content="Tree Diagram Syntax, , , , , , , 0, , , , , , 0, tree-diagram-syntax, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://tanyadisini.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://tanyadisini.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://tanyadisini.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://tanyadisini.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://tanyadisini.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://tanyadisini.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://tanyadisini.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Tree Diagram Syntax</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">iklimafadllin</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Tree+Diagram+Syntax" alt="Tree Diagram Syntax">
+                    </div>
+                    <p></p>
+                    <p>tree diagram syntax dari kalimat &quot;he seems so glad&quot;​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tree-diagram-syntax-dari-kalimat-he-seems-so-glad%e2%80%8b">1.
+                                            tree diagram syntax dari kalimat "he seems so glad"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-tree-diagram-syntax-dari-the-very-tall-guy-saw-me">2.
+                                            Tuliskan tree diagram syntax dari "The very tall guy saw me."</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#make-syntax-tree-diagram-my-brother-wrote-down-his-adderess-%e2%80%8b">3.
+                                            make syntax tree diagram my brother wrote down his adderess.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-tree-diagram-syntax-dengan-kalimat-berikut-1-tarzan-saw-a-leopard-2-the-monkey-laughs-3-i-bought-a-new-royal-enfield-4-dr-vijay-diagnosed-the-disease-5-my-mother-loves-cats-%e2%80%8b">4.
+                                            buatlah tree diagram syntax dengan kalimat berikut.1. Tarzan saw a leopard.2. The monkey laughs.3. I bought a new Royal Enfield.4. Dr. Vijay diagnosed the disease.5. My mother loves cats.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-i-have-two-brother-%e2%80%8b">5.
+                                            tolong tulis kan tree diagram syntax dari kalimat " I have two brother "​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-syntax-syntax-dasar-pada-command-promt">6.
+                                            Tuliskan syntax-syntax dasar pada command promt</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-a-high-quality-education-for-all-students-is-a-fundamental-right">7.
+                                            Tolong tuliskan tree diagram syntax dari kalimat: A high-quality education for all students is a fundamental right.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-she-is-the-teacher-that-i-told-you-about%e2%80%8b">8.
+                                            tolong tuliskan tree diagram syntax dari kalimat " she is the teacher that I told you about"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#ayo-dong-bantuin-buatin-tree-diagram-syntax-dari-kalimat-bob-refused-the-offer-froudly-%e2%80%8b">9.
+                                            ayo dong bantuin.. buatin tree diagram syntax dari kalimat " bob refused the offer froudly " ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-diagram-tree-syntax-darithey-struggled-without-food-or-a-reliable-source-of-water-the-explorer-and-the-wolves-lived-in-peace-and-harmony">10.
+                                            Tolong tuliskan diagram tree syntax dari:
+They struggled without food or a reliable source of water.
+The explorer and the wolves lived in peace and harmony.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-i-just-saw-a-lovely-rainbow-hanging-in-the-sky-yesterday">11.
+                                            tolong tuliskan tree diagram syntax dari kalimat " I just saw a lovely rainbow hanging in the sky yesterday"</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-buat-kan-diagram-tree-syntax-dari-kalimat-ini-1-the-government-has-urged-lawmakers-to-swiftly-pass-three-trade-agreement-2-these-girls-must-have-felt-completely-abandoned-by-the-state-and-soc">12.
+                                            Tolong buat kan diagram tree syntax dari kalimat ini 1. The Government has urged lawmakers to swiftly pass three trade agreement.2. These girls must have felt completely abandoned by the state and society.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-hen-ate-the-corn-gambarkan-tree-diagramnya-%e2%80%8b">13.
+                                            The hen ate the corn gambarkan tree diagramnya ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-ditampilkan-apa-bila-kita-mengetik-syntax-dtree-pada-command-prompt">14.
+                                            Apa yang ditampilkan apa bila kita mengetik syntax D:\&gt;Tree pada command prompt? *</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tree-diagram-syntax-of-he-looked-at-the-dog-with-one-eye">15.
+                                            Tree diagram syntax of he looked at the dog with one eye</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tree-diagram-syntax-she-is-the-teacher-that-i-told-you-about%e2%80%8b">16.
+                                            tree diagram syntax "She is the teacher that i told you about"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-the-nurse-thought-that-the-patient-died%e2%80%8b">17.
+                                            tolong tuliskan tree diagram syntax dari kalimat " the nurse thought that the patient died"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-tree-diagram-syntax-dari-kalimat-he-went-to-bed-because-he-was-sleep%e2%80%8b">18.
+                                            Tuliskan tree diagram syntax dari kalimat "He went to bed because he was sleep"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-i-am-the-first-child-%e2%80%8b">19.
+                                            tolong tulis kan tree diagram syntax dari kalimat " I am the first child  "​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-diagram-syntax-dari-kalimat-jaehyuk-is-my-favorite-boy%e2%80%8b">20.
+                                            tolong tuliskan diagram syntax dari kalimat " jaehyuk is my favorite boy"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-tree-diagram-syntax-dari-kalimat-the-bouys-usually-sleep-on-the-floor-every-night%e2%80%8b">21.
+                                            Tuliskan tree diagram syntax dari kalimat "The bouys usually sleep on the floor every night"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tree-diagram-syntax-dari-kalimat-the-baby-cried-loudly-all-night-long-bagaimana">22.
+                                            Tree diagram syntax dari kalimat 'The baby cried loudly all night long' bagaimana?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#make-a-syntax-tree-diagram-from-the-sentence-she-was-walking-quickly-to-the-mall%e2%80%8b">23.
+                                            make a syntax tree diagram from the sentence = she was walking quickly to the mall​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">24.
+                                            tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#make-a-diagram-about-your-familybuatlah-sebuah-diagram-tentang-keluargamumy-family-tree%e2%80%8b">25.
+                                            Make a diagram about your family!Buatlah sebuah diagram tentang keluargamu!My Family Tree​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#how-much-is-the-aspect-tree-diagram%e2%80%8b">26.
+                                            How much is the Aspect Tree Diagram?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-miss-murple-solved-the-crime-in-the-kitchen">27.
+                                            tolong tuliskan tree diagram syntax dari kalimat miss murple solved the crime in the kitchen</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">28.
+                                            tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#syntax-tree-diagram-dari-kalimat-our-extended-families-stay-with-us-this-weekend%e2%80%8b">29.
+                                            syntax tree diagram dari kalimat "Our extended families stay with us this weekend"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-gambarkan-tree-diagram-syntax-dari-kalimat-language-processing-in-relation-to-human-brain-is-the-study-about-human-comprehension-in-language-production-in-mental-lexicon-of-human-brainnanti-a">30.
+                                            Tolong gambarkan tree diagram syntax dari kalimat "Language processing in relation to human brain is the study about human comprehension in language production in mental lexicon of human brain"Nanti aku kasih poin, thankyouuu​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#see-many-student-tree-diagram%e2%80%8b">31.
+                                            see many student tree diagram​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-fatimah-write-a-poem-and-ali-reads-a-magazine%e2%80%8b">32.
+                                            tolong tuliskan tree diagram syntax dari kalimat" Fatimah write a poem and Ali reads a magazine"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-recently-the-old-men-and-women-left%e2%80%8b">33.
+                                            tolong tuliskan tree diagram syntax dari kalimat " recently, the old men and women left"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-my-birth-day-is-on-june-14%e2%80%8b">34.
+                                            tolong tulis kan tree diagram syntax dari kalimat " my birth day is on june 14"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buat-syntax-tree-diagram-you-were-absent-in-the-class-yesterday%e2%80%8b">35.
+                                            buat syntax tree diagram "you were absent in the class yesterday"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#make-syntax-tree-diagrams-the-parents-were-waiting-outside-the-gate-to-pick-up-their-kids%e2%80%8b">36.
+                                            make syntax tree diagrams "The parents were waiting outside the gate to pick up their kids"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-my-aunt-who-lives-on-padang-is-planting-the-flower-in-the-yard%e2%80%8b">37.
+                                            tolong tuliskan tree diagram syntax dari kalimat " my aunt who lives on Padang is planting the flower in the yard"​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-romeo-is-the-son-of-a-prominent-family">38.
+                                            Tolong tuliskan tree diagram syntax dari kalimat romeo is the son of a prominent family</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-tuliskan-tree-diagram-syntax-dari-kalimat-we-went-to-jakarta-two-days-ago-last-night-we-met-him-did-she-go-last-night">39.
+                                            tolong tuliskan tree diagram syntax dari kalimat 
+- "we went to jakarta two days ago"
+- "last night, we met him"
+- did she go last night"</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">40.
+                                            tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="tree-diagram-syntax-dari-kalimat-he-seems-so-glad%e2%80%8b">
+                            1. tree diagram syntax dari kalimat "he seems so glad"​</h2><br />
+                        <p></p><p></p><p>S = sentence</p><p>NP = noun phrase</p><p>VP = verb phrase</p><p>AdjP = adjective phrase</p><p>Adj = adjective</p><p>Adv = adverb</p><p>V = verb</p><p></p><p></p><p>maaf klo tulisannya jelek.</p><p>kira2 seperti itu tree diagramnya.</p><p></p><p>semoga membantu. mohon koreksi jika salah.</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-tree-diagram-syntax-dari-the-very-tall-guy-saw-me">
+                            2. Tuliskan tree diagram syntax dari "The very tall guy saw me."</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>tuluskan diagram pohon dari "Pria yang sangat tinggi melihat saya."</p><p><strong>Penjelasan:</strong></p><p>saya melihat pria yang sangat tinggi</p><br />
+                                            <h2 class="ez-toc-section" id="make-syntax-tree-diagram-my-brother-wrote-down-his-adderess-%e2%80%8b">
+                            3. make syntax tree diagram my brother wrote down his adderess.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>tuh jawaban nya dek</p><p><strong>Penjelasan:</strong></p><p>tolong folow KK yah</p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-tree-diagram-syntax-dengan-kalimat-berikut-1-tarzan-saw-a-leopard-2-the-monkey-laughs-3-i-bought-a-new-royal-enfield-4-dr-vijay-diagnosed-the-disease-5-my-mother-loves-cats-%e2%80%8b">
+                            4. buatlah tree diagram syntax dengan kalimat berikut.1. Tarzan saw a leopard.2. The monkey laughs.3. I bought a new Royal Enfield.4. Dr. Vijay diagnosed the disease.5. My mother loves cats.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>mencong mencong mencong mencong</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-i-have-two-brother-%e2%80%8b">
+                            5. tolong tulis kan tree diagram syntax dari kalimat " I have two brother "​</h2><br />
+                        Phrase structure tree<p></p>Explanation <p><strong>Syntax</strong> merupakan salah satu cabang dari ilmu kebahasaan yang mempelajari tentang struktur pembentukan kata-kata menjadi satu kesatuan kalimat terstruktur dan bermakna jelas.
+</p><p>Penggunaan pohon diagram syntax merupakan penggambaran bagaimana adanya hubungan hirarki antara komponen-komponen/kata-kata yang terkandung dalam suatu kalimat.  </p><p>
+</p><p><strong>Penyusunan pohon diagram syntax/pohon struktur frasa berdasarkan karakteristiknya { syntax category }  :  </strong></p><p>1. Kelas kata { Parts of speech }
+</p><p>Parts of speech  meliputi determiner (det), Adjective (Adj), Noun (N), Pronoun (Pro), Preposition (P), Adverb ( Adv), Auxiliary ( Aux), Verb ( V).
+</p><p>2.  Tatanan penyusunan frasa ( Phrase Structure Grammar )
+</p><p>Pola penyusunan meliputi Noun phrase (NP), Adjective phrase ( AdjP), Verb phrase (VP), Adverb phrase(AdvP), Preposition phrase(PP) .
+</p><p>
+</p>5 frasa utama gramatikal dala analisis pohon diagram syntax :
+<p><strong>1. Noun phrase  </strong></p>Sekumpulan kata/frasa  yang memodifikasi kata benda.<p><strong></strong></p><p><strong>Exp :  </strong></p><p>The old woman crossed the street.
+</p><p></p><p><strong>2. Adjective phrase
+</strong></p>Frasa yang memberikan penjelasan detail dari kata benda. Frasa terdiri dari keterangan dan kata sifat.
+<p></p><p><strong>Exp :
+</strong></p><p>She is very clever.
+</p><p></p><p><strong>3. Verb phrase  </strong></p>Frasa yang terbentuk paling tidak terdapat satu kata kerja utama dengan didukung kata kerja pengikat/ pelengkap kata kerja.
+<p></p><p><strong>Exp</strong>  :
+</p><p>The gold miner found the diamond.
+</p><p></p><p><strong>4. Adverb phrase</strong></p>Frasa yang berperan memberikan penjelas keterangan waktu (when), alasan (why), keterangan tempat (where) dan bagaimana sesuatu itu terjadi (How).
+<p></p><p><strong>Exp :
+</strong></p><p>They are going to go to Bali <strong>next week.
+</strong></p><p></p><p><strong>5. Preposition phrase  </strong></p>Frasa yang berperan sebagai kata depan maupun imbuhan.
+<p></p><p><strong>Exp :
+</strong></p><p>He went to Surabaya by a train.
+</p><p>
+</p><p>
+</p><p>
+</p>Konsep Penyusunan frasa dalam pohon diagram syntax
+<p>1. S=&gt; NP  VP
+</p><p>2. NP=&gt; {det}  {Adj}  N  {PP}  </p><p>3. VP=&gt; V { NP } { PP} { Adv}
+</p><p>4. PP =&gt; P  NP
+</p><p>5. AP =&gt; A { PP }  </p><p>
+</p><p><strong>Contoh struktur frasa :
+</strong></p><p>1. The old woman =&gt; det Adj N
+</p><p>2. The mouse in the cage =&gt; det N PP
+</p><p>3. Catch that mouse =&gt; V NP
+</p><p>4. Enter the house quietly=&gt;V NP Adv
+</p><p>5. Eat an apple in the kitchen=&gt; V NP PP
+</p><p>6. Run into the hole quickly =&gt; V PP Adv
+</p><p>
+</p><p><strong>Maka, penyusunan pohon diagram syntax dari kalimat “I have two brothers ”  :
+</strong></p><p>I =&gt; N
+</p><p>have =&gt; V
+</p><p>two brothers =&gt; det N
+</p><p>
+</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-syntax-syntax-dasar-pada-command-promt">
+                            6. Tuliskan syntax-syntax dasar pada command promt</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1.DEL/DELETE </p><p>2.REN/RENAME</p><p>3.COPY</p><p>4.TYPE</p><p>5.REDIRECTION</p><p>6.COPY CON</p><p>7.RD/RMDIR</p><p>8.CH/CHDIR</p><p>9.MD/MKDIR</p><p>10.DIR</p><p>11.CLS</p><p>12.VER</p><p>13.TIME</p><p>15.DATE</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-a-high-quality-education-for-all-students-is-a-fundamental-right">
+                            7. Tolong tuliskan tree diagram syntax dari kalimat: A high-quality education for all students is a fundamental right.</h2><br />
+                        <p>                                     is</p><p>                                      |</p><p>              ---------------------------------------------------</p><p>              |                                                 |</p><p>      high-quality                           fundamental right</p><p>           |                                         |</p><p>           |                                         |</p><p>           A                               education for all students</p><p></p><p></p><p></p><p>Dalam diagram ini, kata "is" menjadi akar (root) dari pohon, sedangkan kata-kata lainnya berada di bawahnya sebagai cabang-cabang (branches) yang menunjukkan hubungan antara kata-kata tersebut.</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-she-is-the-teacher-that-i-told-you-about%e2%80%8b">
+                            8. tolong tuliskan tree diagram syntax dari kalimat " she is the teacher that I told you about"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Dia adalah guru yang aku ceritakan</p><br />
+                                            <h2 class="ez-toc-section" id="ayo-dong-bantuin-buatin-tree-diagram-syntax-dari-kalimat-bob-refused-the-offer-froudly-%e2%80%8b">
+                            9. ayo dong bantuin.. buatin tree diagram syntax dari kalimat " bob refused the offer froudly " ​</h2><br />
+                        <p></p><p>#semoga membantu. :)</p><p>#maaf kalo salah.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-diagram-tree-syntax-darithey-struggled-without-food-or-a-reliable-source-of-water-the-explorer-and-the-wolves-lived-in-peace-and-harmony">
+                            10. Tolong tuliskan diagram tree syntax dari:
+They struggled without food or a reliable source of water.
+The explorer and the wolves lived in peace and harmony.</h2><br />
+                        <p>TREE DIAGRAM SYNTAX</p><p>Jawaban terlampir</p><p></p>EXPLANATION<p><strong>Tree diagram syntax adalah</strong>  diagram bersusun yang menunjukkan struktur kehirarkian komponen-komponen kalimat. Struktur paling awal, menggunakan simbol "S", di mana merupakan singkatan dari "Sentence" (Kalimat).</p><p><strong>Singkatan dalam pohon diagram</strong></p><p>S : Sentence</p><p>NP : Noun Phrase</p><p>VP : Verb Phrase</p><p>V : Verb</p><p>N : Noun</p><p>Det : Determiner</p><p>PP : Prepositional Phrase </p><p>Pro : Pronoun</p><p>PN : Proper Noun</p><p>AdvP : Adverb Phrase</p><p>AP : Adjective Phrase</p><p>CP : Complementizer Phrase</p><p>C : Complementizer</p><p></p><p><strong>Contoh struktur frasa:</strong></p><p>1) A curly  girl : det Adj N</p><p></p><p>                            NP</p><p>                      /       I        \</p><p>                 det      adj      N</p><p>                    I          I         I</p><p>                  <strong>A    curly     girl </strong></p><p></p><p>               </p><p>2) The car in the garage: det N (PP){P}{NP}</p><p>                             NP</p><p>                          /    I     \       </p><p>                    det     N      PP</p><p>                     I        I        /    \ </p><p>                     I        I       P      NP</p><p>                     I        I       I       /    \</p><p>                     I        I       I     det    N</p><p>                     I        I       I       I       I</p><p>                  <strong>The  car   in   the    garage</strong></p><p></p><p></p><p>3) Eat the food:  V NP</p><p>                        VP</p><p>                     /        \</p><p>                   V          NP</p><p>                   I          /     \</p><p>                   I       det     N</p><p>                   I         I         I</p><p>              <strong>Eat      the    food</strong></p><p></p><p>4)  Walk along the street  quickly: </p><p> V PP {P} {NP} Adv</p><p></p><p>                                    VP</p><p>                          /          I            \ </p><p>                      V           PP          Adv       </p><p>                      I           /   \               I</p><p>                      I         P      NP         I</p><p>                      I         I      /  \           I</p><p>                      I         I   det    N      I</p><p>               <strong>Walk  along the street quickly</strong></p><p>               </p><p>--------</p>Learn more about<p>Tree Diagram Syntax </p><p>1) I have two brothers</p><p>https://brainly.co.id/tugas/25630326</p><p>2) I am the first child</p><p>https://brainly.co.id/tugas/25630337</p><p>3) He looked at the dog with one eye</p><p>https://brainly.co.id/tugas/26195459</p><p>4) My father goes to his office everyday</p><p>https://brainly.co.id/tugas/35488068</p><p>5) The parents were waiting outside the gate to pick up their kids</p><p>https://brainly.co.id/tugas/37198112</p><p>6) I just saw a lovely rainbow hanging in the sky yesterday</p><p>https://brainly.co.id/tugas/37212903</p><p>--------</p>Details<p>Grade: Intermediate</p><p>Subject: English</p><p>Material: Syntax</p><p></p><p>Keywords : tree diagram, syntax, they struggled without food or a reliable source of water</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-i-just-saw-a-lovely-rainbow-hanging-in-the-sky-yesterday">
+                            11. tolong tuliskan tree diagram syntax dari kalimat " I just saw a lovely rainbow hanging in the sky yesterday"</h2><br />
+                        <p><strong>Tree Diagram Syntax</strong></p><p>Jawaban bisa dilihat di lampiran</p><p></p>EXPLANATION<p><strong>Tree diagram syntax</strong> adalah diagram bercabang-cabang yg menunjukkan struktur penyusunan kehierarkian unsur² kalimat.</p><p><strong>Struktur paling atas</strong> dari pohon diagram Syntax, ditandai dengan  simbol "S" di mana singkatan dari "Sentence" (Kalimat). </p><p>Kemudian dari sini, dibagi ke dalam 2 konstituen (grup kecil); NP &amp; VP.  </p><p><strong>Urutan paling kiri</strong> dimulai dengan simbol NP (Noun Phrase) di mana diisikan oleh  awalan (determiner), kata sifat (adjective), kata benda (Noun) dan sebagainya.</p><p>Sedangkan, yg paling kanan diisi oleh VP (Verb Phrase) di mana dicabangkan dengan frasa nomina (NP), frasa preposisi (PP), kata kerja (V) dan sebagainya. </p><p></p><p><strong>Simbol² dlm analisis s</strong><strong>i</strong><strong>ntaksis </strong><strong>linguistik</strong></p><p>S : Sentence</p><p>NP : Noun Phrase</p><p>VP  : Verb Phrase</p><p>V    : Verb</p><p>N    : Noun</p><p>Det  : Determiner</p><p>PP   : Prepositional Phrase</p><p>Pro   : Pronoun</p><p>PN     : Proper Noun</p><p>AdvP : Adverb Phrase</p><p>AP : Adjective Phrase</p><p></p><p><strong>Frasa utama dalam pohon diagram syntax </strong></p><p>1) S ➡ NP VP</p><p>             S</p><p>           /    \ </p><p>         NP  VP</p><p></p><p>2) NP ➡ Det N</p><p>              S</p><p>            /   \</p><p>         NP    VP</p><p>         /  \ </p><p>       Det  N</p><p></p><p>4) VP ➡ V PP</p><p>                 S</p><p>              /     \</p><p>            NP    VP</p><p>            / \      /  \</p><p>         Det N   V  PP</p><p></p><p></p><p>5) PP ➡ Prep NP</p><p>                S</p><p>              /     \</p><p>            NP    VP</p><p>            / \      /   \</p><p>         Det N   V    PP</p><p>                            /   \</p><p>                        Prep  NP</p><p></p><p><strong>Contoh struktur frasa &amp; pohon diagramnya :</strong></p><p>1. The little baby  : det Adj N</p><p></p><p>                        NP</p><p>                     /    I   \</p><p>                 det  adj   N</p><p>                    I      I      I</p><p>               The little  baby</p><p>               </p><p>2. The lion in the jungle : det N (PP){P}{NP}</p><p></p><p>                            NP</p><p>                          /  I    \       </p><p>                    det    N    PP</p><p>                     I        I      /  \ </p><p>                     I        I    P     NP</p><p>                     I        I    I     /   \</p><p>                     I        I    I   det   N</p><p>                     I        I    I     I      I</p><p>                  The  lion in  the  jungle</p><p></p><p></p><p>3. Catch the train :  V NP</p><p></p><p>                        VP</p><p>                     /       \</p><p>                   V         NP</p><p>                   I          /  \</p><p>                   I       det  N</p><p>                   I         I      I</p><p>              Catch   the train</p><p></p><p>4. Enter the house quietly : V NP Adv</p><p></p><p>                               VP</p><p>                          /      I     \ </p><p>                     V       NP      Adv       </p><p>                     I        /   \         I</p><p>                     I    det    N       I</p><p>                     I      I       I        I</p><p>              Enter  the house quietly   </p><p></p><p>================</p>Learn more about<p>Tree Diagram Syntax </p><p>1) I have two brothers</p><p>https://brainly.co.id/tugas/25630326</p><p>2) I am the first child</p><p>https://brainly.co.id/tugas/25630337</p><p>3) He looked at the dog with one eye</p><p>https://brainly.co.id/tugas/26195459</p><p>4) My father goes to his office everyday</p><p>https://brainly.co.id/tugas/35488068</p><p>=============</p>Details<p>Grade  : Intermediate</p><p>Subject : English</p><p>Material : Syntax</p><p></p><p>Keywords : tree diagram, syntax, rainbow</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-buat-kan-diagram-tree-syntax-dari-kalimat-ini-1-the-government-has-urged-lawmakers-to-swiftly-pass-three-trade-agreement-2-these-girls-must-have-felt-completely-abandoned-by-the-state-and-soc">
+                            12. Tolong buat kan diagram tree syntax dari kalimat ini 1. The Government has urged lawmakers to swiftly pass three trade agreement.2. These girls must have felt completely abandoned by the state and society.​</h2><br />
+                        <p><strong>Jawaban:</strong></p>[sentence [noun phrase [determiner the] [singular noun government]] [verb phrase [modal has] [past participle urged] [plural noun lawmakers] [preposition to] [adverb swiftly] [infinitive pass] [noun phrase [determiner three] [singular noun trade] [singular noun agreement]]][sentence [noun phrase [determiner these] [plural noun girls]] [verb phrase [modal must] [infinitive have] [past participle felt] [adverb completely] [verb abandoned] [prepositional phrase [preposition by] [noun phrase [determiner the] [singular noun state] [conjunction and] [singular noun society]]]]]<p><strong>Penjelasan:</strong></p><p>semoga membantu dan bisa dipahami</p><br />
+                                            <h2 class="ez-toc-section" id="the-hen-ate-the-corn-gambarkan-tree-diagramnya-%e2%80%8b">
+                            13. The hen ate the corn gambarkan tree diagramnya ​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>maksuttttttt????</p><p>kalau ngasih soal yg jelas dkit dong</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-ditampilkan-apa-bila-kita-mengetik-syntax-dtree-pada-command-prompt">
+                            14. Apa yang ditampilkan apa bila kita mengetik syntax D:\&gt;Tree pada command prompt? *</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>syntax D:\&gt;........</p><p>maksudnya</p><br />
+                                            <h2 class="ez-toc-section" id="tree-diagram-syntax-of-he-looked-at-the-dog-with-one-eye">
+                            15. Tree diagram syntax of he looked at the dog with one eye</h2><br />
+                        TREE DIAGRAM SYNTAX<p></p><p><strong>Syntax</strong> merupakan cabang dari ilmu kebahasaan yang mempelajari tentang struktur pembentukan kata-kata menjadi satu kesatuan kalimat terstruktur dan bermakna jelas.</p><p></p><p>Penggunaan tree diagram syntax merupakan penggambaran bagaimana adanya hubungan hirarki antara komponen-komponen yang terkandung dalam suatu kalimat.  </p><p></p><p>Penyusunan tree diagram syntax/Phrase structure tree berdasarkan karakteristiknya <strong>{ syntax category }  : </strong> </p><p><strong>1. Kelas kata { Parts of speech }</strong></p>Parts of speech  meliputi determiner (det), Adjective (Adj), Noun (N), Pronoun (Pro), Preposition (P), Adverb ( Adv), Auxiliary ( Aux), Verb ( V).<p><strong>2. Tatanan penyusunan frasa ( Phrase Structure Grammar )</strong></p>Pola penyusunan meliputi Noun phrase (NP), Adjective phrase ( AdjP), Verb phrase (VP), Adverb phrase(AdvP), Preposition phrase(PP) .<p></p>5 frasa utama gramatikal dala analisis Tree Diagram Syntax :<p><strong>1. Noun Phrase   (NP)</strong></p>Sekumpulan kata/frasa  yang memodifikasi kata benda.<p>Exp :  </p><p>The old woman crossed the street.</p><p></p><p><strong>2. Adjective phrase ( AdjP)</strong></p>Frasa yang memberikan penjelasan detail dari kata benda. Frasa terdiri dari <strong>keterangan dan kata sifat.</strong><p>Exp :</p><p>She is very clever.</p><p></p><p><strong>3. Verb phrase   (VP)</strong></p>Frasa yang terbentuk paling tidak terdapat satu kata kerja utama dengan didukung kata kerja pengikat/ pelengkap kata kerja.<p>Exp  :</p><p>The gold miner found the diamond.</p><p></p><p><strong>4. Adverb phrase (AdvP)</strong></p>Frasa yang berperan memberikan penjelas keterangan waktu (when), alasan (why), keterangan tempat (where) dan bagaimana sesuatu itu terjadi (How).<p>Exp :</p><p>They are going to go to Bali next week.</p><p></p><p><strong>5. Preposition phrase  (PP)</strong></p>Frasa yang berperan sebagai kata depan maupun imbuhan.<p>Exp :</p><p>He went to Surabaya by a train.</p><p></p><p></p>Konsep Tree Diagram Tree<p>1. S=&gt; NP  VP</p><p>2. NP=&gt; {det}  {Adj}  N  {PP}  </p><p>3. VP=&gt; V { NP } { PP} { Adv}</p><p>4. PP =&gt; P  NP</p><p>5. AP =&gt; A { PP }  </p><p></p>Contoh struktur frasa :<p>1. The old woman =&gt; det Adj N</p><p>2. The mouse in the cage =&gt; det N PP</p><p>3. Catch that mouse =&gt; V NP</p><p>4. Enter the house quietly=&gt;V NP Adv</p><p>5. Eat an apple in the kitchen=&gt; V NP PP</p><p>6. Run into the hole quickly =&gt; V PP Adv</p><p></p><p></p>Learn more about<p>Tree Diagram Syntax</p><p>https://brainly.co.id/tugas/25630326</p><p></p>See detail<p>Level              : Advanced</p><p>Subject          : English</p><p>Sub Category : Syntax</p><p>Code               : 5</p><p></p>Keywords      : Tree Diagram Syntax <p>#SEJUTAPOHON</p><br />
+                                            <h2 class="ez-toc-section" id="tree-diagram-syntax-she-is-the-teacher-that-i-told-you-about%e2%80%8b">
+                            16. tree diagram syntax "She is the teacher that i told you about"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>simtaks pohon diagram : dia guru yang aku bicarakan</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-the-nurse-thought-that-the-patient-died%e2%80%8b">
+                            17. tolong tuliskan tree diagram syntax dari kalimat " the nurse thought that the patient died"​</h2><br />
+                        <p><strong>TREE DIAGRAM SYNTAX</strong></p><p></p><p>NP (VP) {V} {CP}</p><p>Jawaban rinci bisa dilihat di lampiran gambar</p><p></p>EXPLANATION<p>Tree diagram syntax adalah diagram bersusun yg menunjukkan struktur  kehirarkian komponen kalimat.</p><p>Struktur paling atas dari pohon diagram Syntax, ditandai dengan  simbol "S" di mana singkatan dari "Sentence" (Kalimat). </p><p>Kemudian dari sini, dibagi ke dalam 2 konstituen (grup kecil dlm kalimat); NP &amp; VP.  </p><p>Urutan paling kiri dimulai dengan simbol NP (Noun Phrase) di mana diisikan oleh  awalan (determiner), kata sifat (adjective), kata benda (Noun) dan sebagainya.</p><p>Sedangkan, yg paling kanan diisi oleh VP (Verb Phrase) di mana dicabangkan dengan frasa nomina (NP), frasa preposisi (PP), kata kerja (V) dan sebagainya. </p><p></p><p><strong>Simbol² dlm analisis sintaksis phon diagram</strong></p><p>S : Sentence</p><p>NP : Noun Phrase</p><p>VP  : Verb Phrase</p><p>V    : Verb</p><p>N    : Noun</p><p>Det  : Determiner</p><p>PP   : Prepositional Phrase</p><p>Pro   : Pronoun</p><p>PN     : Proper Noun</p><p>AdvP : Adverb Phrase</p><p>AP : Adjective Phrase</p><p>CP : Complementizer Phrase</p><p>C : Complementizer</p><p></p><p><strong>Frasa utama dalam pohon diagram Sintaks</strong></p><p>1)  S ➡ NP VP</p><p>              S</p><p>            /    \ </p><p>          NP  VP</p><p></p><p>2) NP ➡ Det N</p><p>              S</p><p>            /   \</p><p>         NP    VP</p><p>         /  \ </p><p>      Det  N</p><p></p><p>4) VP ➡ V PP</p><p>                 S</p><p>              /     \</p><p>            NP     VP</p><p>            / \       /  \</p><p>        Det N    V  PP</p><p></p><p></p><p>5) PP ➡ Prep NP</p><p>                 S</p><p>              /     \</p><p>            NP     VP</p><p>            / \      /   \</p><p>         Det  N  V    PP</p><p>                            /   \</p><p>                        Prep  NP</p><p></p><p><strong>Contoh frasa dalam pohon diagram Sintaks</strong> :</p><p>1. The beautiful girl : det Adj N</p><p></p><p>                            NP</p><p>                     /        I        \</p><p>                 det      adj      N</p><p>                    I          I         I</p><p>               The beautiful  girl</p><p>               </p><p>2. The ant in the jar : det N (PP){P}{NP}</p><p></p><p>                             NP</p><p>                          /  I     \       </p><p>                    det    N       PP</p><p>                     I        I        /    \ </p><p>                     I        I       P      NP</p><p>                     I        I       I       /   \</p><p>                     I        I       I     det   N</p><p>                     I        I       I       I      I</p><p>                  The ant      in   the    jar</p><p></p><p></p><p>3. Throw the ball :  V NP</p><p></p><p>                        VP</p><p>                     /        \</p><p>                   V          NP</p><p>                   I          /     \</p><p>                   I       det     N</p><p>                   I         I         I</p><p>              throw   the    ball</p><p></p><p>4. Walk down the street slowly : </p><p> V PP {P} {NP} Adv</p><p></p><p>                                    VP</p><p>                          /          I            \ </p><p>                      V           PP          Adv       </p><p>                      I           /   \               I</p><p>                      I         P      NP          I</p><p>                      I         I      /  \            I</p><p>                      I         I   det    N        I</p><p>               Walk  down the street slowly</p><p>               </p><p>================</p>Learn more about<p>Tree Diagram Syntax </p><p>1) I have two brothers</p><p>https://brainly.co.id/tugas/25630326</p><p>2) I am the first child</p><p>https://brainly.co.id/tugas/25630337</p><p>3) He looked at the dog with one eye</p><p>https://brainly.co.id/tugas/26195459</p><p>4) My father goes to his office everyday</p><p>https://brainly.co.id/tugas/35488068</p><p>5) The parents were waiting outside the gate to pick up their kids</p><p>https://brainly.co.id/tugas/37198112</p><p>6) I just saw a lovely rainbow hanging in the sky yesterday</p><p>https://brainly.co.id/tugas/37212903</p><p>7) Recently the old men and women left</p><p>https://brainly.co.id/tugas/37263073</p><p>=============</p>Details<p>Grade  : Intermediate</p><p>Subject : English</p><p>Material : Syntax</p><p></p><p>Keywords : tree diagram, syntax, the nurse, patient, died</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-tree-diagram-syntax-dari-kalimat-he-went-to-bed-because-he-was-sleep%e2%80%8b">
+                            18. Tuliskan tree diagram syntax dari kalimat "He went to bed because he was sleep"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Tree diagram syntax dari kalimat "He went to bed because he was sleep" adalah sebagai berikut:|<br />      <br />   <strong>He went to bed</strong></p><p>               |</p><p>               | <strong>because</strong></p><p>               |</p><p>              V</p><p>           <strong> he was sleep<br /><br /></strong>Sintaks pohon ini menunjukkan bahwa "<strong>because</strong>" adalah hubungan antara klausa "<strong>he went to bed</strong>" dan klausa "<strong>he was sleep</strong>". Klausa "<strong>he was sleep</strong>" merupakan alasan mengapa "<strong>he went to bed</strong>".<br /><br />Jangan lupa jadikan jawaban terbaik..! :) ♥</p><p><strong></strong></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-i-am-the-first-child-%e2%80%8b">
+                            19. tolong tulis kan tree diagram syntax dari kalimat " I am the first child  "​</h2><br />
+                        PHRASE STRUCTURE TREE<p></p>Explanation <p><strong>Syntax </strong>merupakan salah satu cabang dari ilmu kebahasaan yang mempelajari <strong>tentang struktur pembentukan kata-kata </strong>menjadi satu kesatuan kalimat terstruktur dan bermakna jelas.
+</p><p>Penggunaan pohon diagram syntax merupakan penggambaran bagaimana adanya hubungan hirarki antara komponen-komponen/kata-kata yang terkandung dalam suatu kalimat.  </p><p>
+</p><p><strong>Penyusunan pohon diagram syntax/pohon struktur frasa berdasarkan karakteristiknya { syntax category }  :  </strong></p><p><strong>1. Kelas kata { Parts of speech }
+</strong></p><p>Parts of speech  meliputi determiner (det), Adjective (Adj), Noun (N), Pronoun (Pro), Preposition (P), Adverb ( Adv), Auxiliary ( Aux), Verb ( V).
+</p><p><strong>2. Tatanan penyusunan frasa ( Phrase Structure Grammar )
+</strong></p><p>Pola penyusunan meliputi Noun phrase (NP), Adjective phrase ( AdjP), Verb phrase (VP), Adverb phrase(AdvP), Preposition phrase(PP) .
+</p><p>
+</p><strong>5 frasa utama gramatikal dalam  pohon diagram syntax :
+</strong><p><strong>1. Noun phrase  </strong></p>Sekumpulan kata/frasa  yang memodifikasi kata benda.<p><strong>Exp :  </strong></p><p>The old woman crossed the street.</p><p></p><p><strong>2. Adjective phrase
+</strong></p>Frasa yang memberikan penjelasan detail dari kata benda. Frasa terdiri dari keterangan dan kata sifat.
+<p><strong>Exp :</strong></p><p>She is very clever.
+</p><p></p><p><strong>3. Verb phrase  </strong></p>Frasa yang terbentuk paling tidak terdapat satu kata kerja utama dengan didukung kata kerja pengikat/ pelengkap kata kerja.
+<p></p><p><strong>Exp :
+</strong></p><p>The gold miner found the diamond.
+</p><p></p><p><strong>4. Adverb phrase</strong></p>Frasa yang berperan sebagai penjelas kata kerja, memberikan informasi detail keterangan waktu (when), alasan (why), keterangan tempat (where) dan bagaimana sesuatu itu terjadi (How).
+<p></p><p><strong>Exp :
+</strong></p><p>They are going to go to Bali next week.
+</p><p></p><p><strong>5. Preposition phrase  </strong></p>Frasa yang berperan sebagai kata depan maupun imbuhan.
+<p></p><p><strong>Exp :</strong></p><p>He went to Surabaya by a train.
+</p><p>
+</p><p>
+</p>
+Konsep Penyusunan frasa dalam pohon diagram syntax
+<p>1. S=&gt; NP  VP
+</p><p>2. NP=&gt; {det }  {Adj}  N  {PP}  </p><p>3. VP=&gt; V { NP } { PP} { Adv}
+</p><p>4. PP =&gt; P  NP
+</p><p>5. AP =&gt; A { PP }  </p><p>
+</p><p><strong>Contoh struktur frasa :
+</strong></p><p>1. The old woman =&gt; det Adj N
+</p><p>2. The mouse in the cage =&gt; det N PP
+</p><p>3. Catch that mouse =&gt; V NP
+</p><p>4. Enter the house quietly=&gt;V NP Adv
+</p><p>5. Eat an apple in the kitchen=&gt; V NP PP
+</p><p>6. Run into the hole quickly =&gt; V PP Adv
+</p><p>
+</p><p>
+</p>Conclusion<p>Maka, penyusunan pohon diagram syntax dari kalimat “I am the first child”  :
+</p><p>I =&gt; N  </p><p>am =&gt; Aux
+</p><p>The first child =&gt; det Adj N
+</p><p>
+</p><p></p><p></p>Detail Answer<p>Level               : Intermediate</p><p>Subject           : English</p><p>Sub.Category : Syntax-Phrase structure tree</p><p>Code               : 5</p><p></p>Keywords        : Syntax ; Phrase structure tree ; I am the first child<p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-diagram-syntax-dari-kalimat-jaehyuk-is-my-favorite-boy%e2%80%8b">
+                            20. tolong tuliskan diagram syntax dari kalimat " jaehyuk is my favorite boy"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>S -&gt; NP VP</p><p></p><p>NP -&gt; Proper Noun</p><p>Proper Noun -&gt; Jaehyuk</p><p></p><p>VP -&gt; Verb NP</p><p>Verb -&gt; is</p><p>NP -&gt; Determiner Adjective Noun</p><p>Determiner -&gt; my</p><p>Adjective -&gt; favorite</p><p>Noun -&gt; boy</p><p></p><p><strong>Penjelasan:</strong></p><p></p><p>S = kalimat utama (sentence)</p><p>NP = frasa nomina (noun phrase)</p><p>VP = frasa verbal (verb phrase)</p><p>N = nomina (noun)</p><p>V cop = kata kerja kopula "is"</p><p>AdjP = frasa adjektiva (adjective phrase)</p><p>Adj = adjektiva (adjective)</p><p>Dalam diagram ini, kalimat "Jaehyuk is my favorite boy" dimulai dari kalimat utama (S) dengan subjek (NP)</p><p></p><p>"Jaehyuk" dan predikat (VP) "is my favorite boy". Predikat ini terdiri dari kata kerja kopula "is" dan frasa nomina (NP) "my favorite boy", yang terdiri dari nomina (N) "boy" dan frasa adjektiva (AdjP) "my favorite", yang terdiri dari adjektiva (Adj) "favorite" dan nomina (N) "my".</p><p>  </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-tree-diagram-syntax-dari-kalimat-the-bouys-usually-sleep-on-the-floor-every-night%e2%80%8b">
+                            21. Tuliskan tree diagram syntax dari kalimat "The bouys usually sleep on the floor every night"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>       S</p><p>      / \</p><p>     NP VP</p><p>     |   \</p><p>     Det V</p><p>     |   \</p><p>     The boys</p><p>            \</p><p>             VP</p><p>             |</p><p>             V</p><p>             |</p><p>             sleep</p><p>             |</p><p>             PP</p><p>             |</p><p>             P</p><p>             |</p><p>             on</p><p>             |</p><p>             NP</p><p>             |</p><p>             Det</p><p>             |</p><p>             the</p><p>             |</p><p>             N</p><p>             |</p><p>             floor</p><p>             |</p><p>             Adv</p><p>             |</p><p>             every</p><p>             |</p><p>             night</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tree-diagram-syntax-dari-kalimat-the-baby-cried-loudly-all-night-long-bagaimana">
+                            22. Tree diagram syntax dari kalimat 'The baby cried loudly all night long' bagaimana?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>itu suruh ngartiin kan.'<strong>t</strong><strong>h</strong><strong>e</strong><strong> </strong><strong>baby </strong><strong>cried </strong><strong>loudly </strong><strong>all </strong><strong>night</strong><strong> </strong><strong>long </strong>'</p><p> <strong>Artinya</strong>:'bayi itu menangis keras sepanjang malam'</p><p><strong>NB </strong><strong>:</strong><strong> </strong><strong>Maaf </strong><strong>kalo</strong><strong> </strong><strong>salah </strong><strong>dan </strong><strong>semoga </strong><strong>membantu</strong><strong> </strong><strong>(◍•ᴗ•◍)</strong></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="make-a-syntax-tree-diagram-from-the-sentence-she-was-walking-quickly-to-the-mall%e2%80%8b">
+                            23. make a syntax tree diagram from the sentence = she was walking quickly to the mall​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>make a syntax tree diagram from the sentence = she was walking quickly to the mall​</p><p></p><p>She = Subject Pronoun</p><p>Was = Tobe in verb-2</p><p>walking = Verb-ing</p><p>quickly = Adverb</p><p>to = Preposition</p><p>the = Definite Article</p><p>mall = Noun</p><p></p><p><strong>Penjelasan:</strong></p><p>Jawaban merupakan penjelasan dari bentuk kalimat Past Continuous Tense disederhanakan dalam bentuk a Syntax Tree Diagram (diagram pohon sintaksis) dalam Bahasa Inggris.</p><p>She = Subject Pronoun = subjek</p><p>Was = Tobe in verb-2 = bentuk kata kerja Tobe dalam bentuk lampau</p><p>walking = Verb-ing = bentuk kata kerja -ing</p><p>quickly = Adverb = kata keterangan</p><p>to = Preposition = kata depan /preposisi</p><p>the = Definite Article / kata sandang terdefinisi</p><p>mall = Noun = kata benda</p><p>Semoga membantu ya.</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">
+                            24. tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut adalah diagram pohon untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives":</p><p></p><p>                                     spending</p><p>                                            |</p><p>                                   _________</p><p>                                  |                   |</p><p>                                 on               and</p><p>                                  |                   |</p><p>                             _____             ___</p><p>                            |           |           |      |</p><p>                        things  control  use lives</p><p>                            |               |       |       |</p><p>                         that       over  of   future</p><p>                            |                            |</p><p>                           __                       ___</p><p>                          |     |                    |        |</p><p>                          i   can't              no    for</p><p>                                |                    |        |</p><p>                         energy             use   lives</p><p>                                |</p><p>                              ___ </p><p>                            |        |</p><p>                         my    things</p><p></p><p>Dalam diagram pohon ini, setiap node mewakili kata dalam kalimat, dengan anak-anak node yang mewakili kata-kata terkait dalam kalimat tersebut. Misalnya, "spending" adalah kata utama yang memiliki dua anak, yaitu "on" dan "and". Setiap anak memiliki anak-anak lainnya yang merepresentasikan kata-kata terkait dalam kalimat.</p><p></p><p>Diagram pohon ini membantu dalam analisis struktur kalimat dan menggambarkan hubungan antara kata-kata dalam kalimat tersebut.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="make-a-diagram-about-your-familybuatlah-sebuah-diagram-tentang-keluargamumy-family-tree%e2%80%8b">
+                            25. Make a diagram about your family!Buatlah sebuah diagram tentang keluargamu!My Family Tree​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>jawabannya ada pada gambar yahh</p><p><strong>Penjelasan:</strong></p><p>perlu kalian ketahui diagram keluarga </p><br />
+                                            <h2 class="ez-toc-section" id="how-much-is-the-aspect-tree-diagram%e2%80%8b">
+                            26. How much is the Aspect Tree Diagram?​</h2><br />
+                        <p>Jawaban:</p><p>Maaf dimana gambarnya</p><p>Where is pitcure??</p><p></p><p>Penjelasan:</p><p>You can send a pitcure with brainly</p><p><strong>Jawaban:</strong></p><p>Sorry but,I don't understand your question as there is no further information like pictures or other.^^ </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-miss-murple-solved-the-crime-in-the-kitchen">
+                            27. tolong tuliskan tree diagram syntax dari kalimat miss murple solved the crime in the kitchen</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>tolong tuliskan tree diagram syntax dari kalimat miss murple solved the crime in the kitchen=tolong tuliskan tree diagram syntax dari kalimat miss murple solve the crime in the kitchen</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">
+                            28. tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</h2><br />
+                        <p>(S (NP (GerundPhrase (Gerund "spending") (NP (PossessivePronoun "my") (Noun "energy")))) (PP (Preposition "on") (NP (NP (Noun "things")) (RelativeClause (Pronoun "that") (S (NP (Pronoun "i")) (AuxiliaryVerb "can't") (Verb "control") (Preposition "over")))))) (Conjunction "and") (VP (Verb "are") (PP (Preposition "of") (NP (Determiner "no") (Noun "use")))) (PP (Preposition "for") (NP (Adjective "future") (Noun "lives")))))</p><br />
+                                            <h2 class="ez-toc-section" id="syntax-tree-diagram-dari-kalimat-our-extended-families-stay-with-us-this-weekend%e2%80%8b">
+                            29. syntax tree diagram dari kalimat "Our extended families stay with us this weekend"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>fjxjnxbsksdbksksbxksndkdslnsksfbosbshsksvxxjfof</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-gambarkan-tree-diagram-syntax-dari-kalimat-language-processing-in-relation-to-human-brain-is-the-study-about-human-comprehension-in-language-production-in-mental-lexicon-of-human-brainnanti-a">
+                            30. Tolong gambarkan tree diagram syntax dari kalimat "Language processing in relation to human brain is the study about human comprehension in language production in mental lexicon of human brain"Nanti aku kasih poin, thankyouuu​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Passive: Bulk materials such as coal, ores, grains and wood chips are handled by belt, chain, slat, pneumatic or screw conveyors, bucket elevators and mobile equipment such as front-end loaders.</p><p></p><p>Active:  Belt, chain, slat, pneumatic or screw conveyors, bucket elevators and mobile equipment such as front-end loaders handle bulk materials such as coal, ores, grains and wood chips</p><p></p><p> Compare the passive and the active sentences. which one is more approriate in the context?</p><br />
+                                            <h2 class="ez-toc-section" id="see-many-student-tree-diagram%e2%80%8b">
+                            31. see many student tree diagram​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Membuat Diagram Pohon untuk Hasil yang Mungkin</p><p>Kadang-kadang untuk menentukan jumlah hasil total, Anda harus membuat daftar semua kemungkinan hasil. Diagram pohon dapat membantu Anda menghasilkan semua hasil tanpa melewatkan satu pun.</p><p>Contoh:</p><p>Tunjukkan kemungkinan hasil dari permainan, Batu, Kertas, Gunting. Temukan kemungkinan permainan seri.</p><p>Tunjukkan Solusi Langkah demi Langkah</p><p>Membuat Diagram Pohon untuk Hasil yang Mungkin Bagian 2</p><p>Contoh sandwich - berapa banyak hasil yang ada?</p><p>Contoh:</p><p>Anda memesan sandwich. Buat daftar semua kemungkinan.</p><p>Roti - putih, penghuni pertama</p><p>Daging - ham, kalkun</p><p>Keju - Amerika, Provolone</p><p>Temukan kemungkinan membuat sandwich dengan roti putih dan ham.</p><p>Tunjukkan Solusi Langkah demi Langkah</p><p>Membuat Diagram Pohon untuk Hasil yang Mungkin Bagian 3</p><p>Contoh menemukan semua hasil yang mungkin dengan menggunakan diagram pohon. Yang ini tentang dua pemintal.</p><p>Contoh: Buat</p><p>daftar kemungkinan hasil dari dua pemintal. Kemudian temukan P (vokal dan bilangan genap)</p><p><strong>Penjelasan:</strong></p><p>aku tau Bahasa Indonesia</p><p>maaf jika salah</p><p>jangan lupa untuk folow</p><p>   </p><p>Making Tree Diagrams for Possible Outcomes</p><p>Sometimes to determine the number of total outcomes, you must list all possible outcomes. A tree diagram can help you generate all the outcomes without skipping any.</p><p>Example:</p><p>Show the possible outcomes of playing the game, Rock, Paper, Scissors. Find the probability of a tie game.</p><p>Show Step-by-step Solutions</p><p>Making Tree Diagrams for Possible Outcomes Part 2</p><p>Sandwich example - how many outcomes are there?</p><p>Example:</p><p>You are ordering a sandwich. Make a list of all the possibilities.</p><p>Bread - white, sourdough</p><p>Meat - ham, turkey</p><p>Cheese - America, Provolone</p><p>Find the probability of making a sandwich with both white bread and ham.</p><p>Show Step-by-step Solutions</p><p>Making Tree Diagrams for Possible Outcomes Part 3</p><p>Example of finding all the possible outcomes using a tree diagram. This one is about two spinners.</p><p>Example:</p><p>List the possible outcomes of the two spinners. Then find the P(vowel and even number)</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-fatimah-write-a-poem-and-ali-reads-a-magazine%e2%80%8b">
+                            32. tolong tuliskan tree diagram syntax dari kalimat" Fatimah write a poem and Ali reads a magazine"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Fatimahh membaca puisi Dan Ali membaca majalah</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-recently-the-old-men-and-women-left%e2%80%8b">
+                            33. tolong tuliskan tree diagram syntax dari kalimat " recently, the old men and women left"​</h2><br />
+                        <p><strong>TREE DIAGRAM SYNTAX</strong></p><p></p><p>AdvP (NP) {det} {NP} V </p><p>Jawaban rinci bisa dilihat di lampiran gambar</p><p></p>EXPLANATION<p><strong>Tree diagram syntax adalah</strong> diagram bersusun yg menunjukkan struktur  kehirarkian komponen kalimat.</p><p>Struktur paling atas dari pohon diagram Syntax, ditandai <strong>dengan  simbol "S" di mana singkatan dari "Sentence" (Kalimat). </strong></p><p>Kemudian dari sini, dibagi lagi ke <strong>dalam 2 konstituen (grup kecil dlm kalimat); NP &amp; VP.</strong>  </p><p>Urutan paling kiri dimulai dengan simbol NP (Noun Phrase) di mana diisikan oleh  awalan (determiner), kata sifat (adjective), kata benda (Noun) dan sebagainya.</p><p>Sedangkan, yg paling kanan diisi oleh VP (Verb Phrase) di mana dicabangkan dengan frasa nomina (NP), frasa preposisi (PP), kata kerja (V) dan sebagainya. </p><p></p><p><strong>Simbol² dlm analisis sintaksis linguistik</strong></p><p>S : Sentence</p><p>NP : Noun Phrase</p><p>VP  : Verb Phrase</p><p>V    : Verb</p><p>N    : Noun</p><p>Det  : Determiner</p><p>PP   : Prepositional Phrase</p><p>Pro   : Pronoun</p><p>PN     : Proper Noun</p><p>AdvP : Adverb Phrase</p><p>AP : Adjective Phrase</p><p></p><p><strong>Frasa utama dalam pohon diagram syntax </strong></p><p>1)  S ➡ NP VP</p><p>              S</p><p>            /    \ </p><p>          NP  VP</p><p></p><p>2) NP ➡ Det N</p><p>              S</p><p>            /   \</p><p>         NP    VP</p><p>         /  \ </p><p>      Det  N</p><p></p><p>4) VP ➡ V PP</p><p>                 S</p><p>              /     \</p><p>            NP     VP</p><p>            / \       /  \</p><p>        Det N    V  PP</p><p></p><p>5) PP ➡ Prep NP</p><p>                 S</p><p>              /     \</p><p>            NP     VP</p><p>            / \      /   \</p><p>         Det  N  V    PP</p><p>                            /   \</p><p>                        Prep  NP</p><p></p><p><strong>Contoh struktur frasa &amp; pohon diagramnya :</strong></p><p>1. The little cat  : det Adj N</p><p></p><p>                        NP</p><p>                     /    I   \</p><p>                 det  adj   N</p><p>                    I      I      I</p><p>               The little  cat</p><p>               </p><p>2. The police in the office : det N (PP){P}{NP}</p><p></p><p>                             NP</p><p>                          /  I     \       </p><p>                    det    N       PP</p><p>                     I        I        /    \ </p><p>                     I        I       P      NP</p><p>                     I        I       I       /   \</p><p>                     I        I       I     det   N</p><p>                     I        I       I       I      I</p><p>                  The police in   the  office</p><p></p><p></p><p>3. Teach the students :  V NP</p><p></p><p>                        VP</p><p>                     /        \</p><p>                   V          NP</p><p>                   I          /     \</p><p>                   I       det     N</p><p>                   I         I         I</p><p>              teach   the students</p><p></p><p>4. Walk down the street slowly : </p><p> V (PP) {P} {NP} Adv</p><p></p><p>                                    VP</p><p>                          /          I            \ </p><p>                      V           PP          Adv       </p><p>                      I           /   \               I</p><p>                      I         P      NP          I</p><p>                      I         I      /  \            I</p><p>                      I         I   det    N        I</p><p>               Walk  down the street slowly</p><p>               </p><p>================</p>Learn more about<p>Tree Diagram Syntax </p><p>1) <strong>I have two brothers</strong></p><p>https://brainly.co.id/tugas/25630326</p><p>2) <strong>I am the first child</strong></p><p>https://brainly.co.id/tugas/25630337</p><p>3) <strong>He looked at the dog with one eye</strong></p><p>https://brainly.co.id/tugas/26195459</p><p>4) <strong>My father goes to his office everyday</strong></p><p>https://brainly.co.id/tugas/35488068</p><p>5) <strong>The parents were waiting outside the gate to pick up their kids</strong></p><p>https://brainly.co.id/tugas/37198112</p><p>6) <strong>I just saw a lovely rainbow hanging in the sky yesterday</strong></p><p>https://brainly.co.id/tugas/37212903</p><p>=============</p>Details<p>Grade  : Intermediate</p><p>Subject : English</p><p>Material : Syntax</p><p></p><p>Keywords : tree diagram, syntax, the old men and women</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tulis-kan-tree-diagram-syntax-dari-kalimat-my-birth-day-is-on-june-14%e2%80%8b">
+                            34. tolong tulis kan tree diagram syntax dari kalimat " my birth day is on june 14"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>"my birth day is on june 14" dalam arti " hari kelahiran saya 14 juni</p><br />
+                                            <h2 class="ez-toc-section" id="buat-syntax-tree-diagram-you-were-absent-in-the-class-yesterday%e2%80%8b">
+                            35. buat syntax tree diagram "you were absent in the class yesterday"​</h2><br />
+                        <p><strong>Syntax Tree Diagram</strong> untuk kalimat:</p><p>"You were absent in the class yesterday"​ adalah seperti yang ada di gambar terlampir. Perinciannya adalah:</p>You: <strong>Pronoun</strong>were: Auxillaryabsent: Adjectivein: Adverb of placethe: <strong>Determiner</strong>class: Nounyesterday: Noun<p></p>Pembahasan<p><strong>Syntax tree diagram</strong> adalah sebuah cara untuk membuat gambaran urutan jenis-jenis kata dalam sebuah kalimat bahasa Inggris dengan membagi setiap kata ke dalam sebuah cabang diagram. Cara ini sangat efektif ketika kita ingin belajar cara mengetahui apa saja <strong>kedudukan </strong>setiap <strong>kata </strong>dalam sebuah kalimat sehingga kita bisa dengan mudah memahami makna yang dikandung dalam kalimat tersebut. Dengan syntax tree diagram ini semua kalimat baik berupa kalimat sederhana atau kalimat kompleks bisa kita analisis dengan mudah. </p><p></p>Pelajari lebih lanjut Materi tentang cara memahami kalimat dalam bahasa Inggris https://brainly.co.id/tugas/31849344<p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="make-syntax-tree-diagrams-the-parents-were-waiting-outside-the-gate-to-pick-up-their-kids%e2%80%8b">
+                            36. make syntax tree diagrams "The parents were waiting outside the gate to pick up their kids"​</h2><br />
+                        <p><strong>Tree Diagram Syntax</strong></p><p></p><p>Jawaban lihat di lampiran</p><p></p>EXPLANATION<p><strong>Tree diagram syntax</strong> adalah diagram bercabang-cabang yg menunjukkan struktur penyusunan kehirarkian kalimat.</p><p>Struktur paling atas dari pohon diagram Syntax, ditandai dengan  simbol "S" di mana singkatan dari "Sentence" (Kalimat). </p><p>Kemudian dari sini, dibagi ke dalam 2 konstituen; NP &amp; VP.  </p><p>Urutan paling kiri dimulai dengan simbol NP (Noun Phrase) di mana diisikan oleh  awalan (determiner), kata sifat (adjective), kata benda (Noun) dan sebagainya.</p><p>Sedangkan, yg paling kanan diisi oleh VP (Verb Phrase) di mana dicabangkan dengan frasa nomina (NP), frasa preposisi (PP), kata kerja (V) dan sebagainya. </p><p></p><p><strong>Simbol² dlm analisis syntaksis </strong></p><p>S : Sentence</p><p>NP : Noun Phrase</p><p>VP  : Verb Phrase</p><p>V    : Verb</p><p>N    : Noun</p><p>Det  : Determiner</p><p>PP   : Prepositional Phrase</p><p>Pro   : Pronoun</p><p>PN     : Proper Noun</p><p>AdvP : Adverb Phrase</p><p>AP : Adjective Phrase</p><p></p><p><strong>Frasa utama dalam pohon diagram syntax</strong> </p><p>1) S ➡ NP VP</p><p>             S</p><p>           /    \ </p><p>         NP  VP</p><p></p><p>2) NP ➡ Det N</p><p>              S</p><p>            /   \</p><p>         NP    VP</p><p>         /  \ </p><p>       Det  N</p><p></p><p>4) VP ➡ V PP</p><p>                 S</p><p>              /     \</p><p>            NP    VP</p><p>            / \      /  \</p><p>         Det N   V  PP</p><p></p><p>5) PP ➡ Prep NP</p><p>                S</p><p>              /     \</p><p>            NP    VP</p><p>            / \      /   \</p><p>         Det N   V    PP</p><p>                            /   \</p><p>                        Prep  NP</p><p></p><p><strong>Contoh struktur frasa &amp; pohon diagramnya</strong> :</p><p>1. The little girl  : det Adj N</p><p></p><p>                        NP</p><p>                     /    I   \</p><p>                 det  adj   N</p><p>                    I      I      I</p><p>               The little  girl</p><p>               </p><p>2. The lion in the cage : det N (PP){P}{NP}</p><p></p><p>                            NP</p><p>                          /  I    \       </p><p>                    det    N    PP</p><p>                     I        I      /  \ </p><p>                     I        I    P     NP</p><p>                     I        I    I     /   \</p><p>                     I        I    I   det   N</p><p>                     I        I    I     I      I</p><p>                  The  lion in  the  cage</p><p></p><p></p><p>3. Catch the ball :  V NP</p><p></p><p>                        VP</p><p>                     /       \</p><p>                   V         NP</p><p>                   I          /  \</p><p>                   I       det  N</p><p>                   I         I      I</p><p>              Catch   the ball</p><p></p><p>4. Enter the house quietly : V NP Adv</p><p></p><p>                               VP</p><p>                          /      I     \ </p><p>                     V       NP      Adv       </p><p>                     I        /   \         I</p><p>                     I    det    N       I</p><p>                     I      I       I        I</p><p>              Enter  the house quietly   </p><p></p><p>================</p>Learn more about<p>Tree Diagram Syntax </p><p>1) I have two brothers</p><p>https://brainly.co.id/tugas/25630326</p><p>2) I am the first child</p><p>https://brainly.co.id/tugas/25630337</p><p>3) He looked at the dog with one eye</p><p>https://brainly.co.id/tugas/26195459</p><p>4) My father goes to his office everyday</p><p>https://brainly.co.id/tugas/35488068</p><p>=============</p>Details<p>Grade  : Intermediate</p><p>Subject : English</p><p>Material : Syntax</p><p></p><p>Keywords : tree diagram, syntax, the parents</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-my-aunt-who-lives-on-padang-is-planting-the-flower-in-the-yard%e2%80%8b">
+                            37. tolong tuliskan tree diagram syntax dari kalimat " my aunt who lives on Padang is planting the flower in the yard"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>ga usah spam kalo ga ngerti ya belajar</p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-romeo-is-the-son-of-a-prominent-family">
+                            38. Tolong tuliskan tree diagram syntax dari kalimat romeo is the son of a prominent family</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>NP(VP){V}{CP}</p><p><strong>Penjelasan:</strong></p><p>Maaf kalo salah terima kasih</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tolong-tuliskan-tree-diagram-syntax-dari-kalimat-we-went-to-jakarta-two-days-ago-last-night-we-met-him-did-she-go-last-night">
+                            39. tolong tuliskan tree diagram syntax dari kalimat 
+- "we went to jakarta two days ago"
+- "last night, we met him"
+- did she go last night"</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>kami ingin pergi ke jakarta 2 hari yang lalu</p><p>malam ini kita ketemuan</p><p>dia (wanita)  akan pergi malam ini</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-syntax-analysisdiagram-tree-untuk-kalimat-spending-my-energy-on-things-that-i-cant-control-over-and-are-of-no-use-for-future-lives%e2%80%8b">
+                            40. tuliskan syntax analysis/diagram tree untuk kalimat "spending my energy on things that i can't control over and are of no use for future lives"​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>                                spending</p><p>                                   |</p><p>                                 __|________________</p><p>                                |                    |</p><p>                             my energy              on</p><p>                                |                    |</p><p>                               ___|_____            _|_</p><p>                              |         |          |   |</p><p>                             |          |          |  things</p><p>                            |           |          |   |</p><p>                          that        I can't    control over</p><p>                            |          |           |</p><p>                           _|_        __|__         |</p><p>                          |   |      |     |        |</p><p>                         |    |     |      |      and</p><p>                      |     |    |       |       |</p><p>                    are   of   no      use     for</p><p>                    |     |    |       |       |</p><p>                 __|__    |    |       |       |</p><p>                |     |  |     |       |       |</p><p>              future lives               |</p><p>                                       of</p><p>                                       |</p><p>                                     __|__</p><p>                                    |     |</p><p>                                  |       |</p><p>                                lives   future</p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/3W1PghsstfU?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>b_inggris</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-bahasa-indonesia-sd-kelas-4.html">Contoh Soal Bahasa Indonesia Sd Kelas 4</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/i-ve-been-looking-for-you.html">I ve Been Looking For You</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-hubungan-antar-garis.html">Contoh Soal Hubungan Antar Garis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-akuntansi-hubungan-kantor-pusat-dan-cabang.html">Contoh Soal Akuntansi Hubungan Kantor Pusat Dan Cabang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-dan-pembahasan-percepatan-gravitasi.html">Contoh Soal Dan Pembahasan Percepatan Gravitasi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-asam-basa-pilihan-ganda.html">Contoh Soal Asam Basa Pilihan Ganda</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/walam-yakun-lahu-kufuwan-ahad.html">Walam Yakun Lahu Kufuwan Ahad</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-kasus-hukum-perikatan.html">Contoh Soal Kasus Hukum Perikatan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-rasio-ketergantungan.html">Contoh Soal Rasio Ketergantungan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-ujian-bahasa-inggris-sma.html">Contoh Soal Ujian Bahasa Inggris Sma</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/genshin-element.html">Genshin Element</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-luas-trapesium.html">Contoh Soal Luas Trapesium</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/veronica-jaja.html">Veronica Jaja</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/doa-berbuka-puasa-ramadhan.html">Doa Berbuka Puasa Ramadhan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-skb-kemendikbud.html">Contoh Soal Skb Kemendikbud</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-dan-jawaban-perubahan-fisika-dan-kimia.html">Contoh Soal Dan Jawaban Perubahan Fisika Dan Kimia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-skd-kemenkumham-penjaga-tahanan-pdf.html">Contoh Soal Skd Kemenkumham Penjaga Tahanan Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/anjai.html">Anjai</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-cerita-geometri.html">Contoh Soal Cerita Geometri</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-keterampilan-berpikir-tingkat-tinggi.html">Contoh Soal Keterampilan Berpikir Tingkat Tinggi</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://tanyadisini.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://tanyadisini.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/1d/a7/d8/1da7d80839196eccc4a624ab91e5ccbf.js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

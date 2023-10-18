@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Double Linked List In C - BELAJAR</title>
+    <meta name="description" content="Double Linked List In C, , , , , , , 0, , , , , , 0, double-linked-list-in-c, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Double Linked List In C - BELAJAR" />
+    <meta property="og:description" content="Double Linked List In C, , , , , , , 0, , , , , , 0, double-linked-list-in-c, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Double Linked List In C - BELAJAR" />
+    <meta name="twitter:description" content="Double Linked List In C, , , , , , , 0, , , , , , 0, double-linked-list-in-c, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://tanyadisini.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://tanyadisini.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://tanyadisini.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://tanyadisini.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://tanyadisini.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://tanyadisini.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://tanyadisini.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://tanyadisini.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Double Linked List In C</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">atoto</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Double+Linked+List+In+C" alt="Double Linked List In C">
+                    </div>
+                    <p></p>
+                    <p>apa perbedaan single linked list dengan double linked list
+serta contoh masing masing</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-single-linked-list-dengan-double-linked-listserta-contoh-masing-masing">1.
+                                            apa perbedaan single linked list dengan double linked list
+serta contoh masing masing</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#linked-list-single-double-bedanya-apa">2.
+                                            Linked list single double bedanya apa?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-kegunaan-pointer-head-pada-sebuah-linked-list-apa-kegunaan-pointer-tail-pada-sebuah-linked-list">3.
+                                            apa kegunaan pointer head pada sebuah linked list?
+ Apa kegunaan pointer tail pada sebuah linked list?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bentuk-deklarasi-manipulasi-linked-list-harus-menggunakan-suatu-pointer">4.
+                                            Bentuk deklarasi manipulasi linked list harus menggunakan suatu pointer?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-dengan-tranversal-pada-operasi-linked-list">5.
+                                            Apa yang di maksud dengan tranversal pada operasi linked list</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kelebihan-dan-kekurangan-circular-linked-list">6.
+                                            kelebihan dan kekurangan Circular Linked list </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bentuk-deklarasi-manipulasi-linked-list-harus-menggunakan-suatu-pointer-menunjuk-ke-node">7.
+                                            bentuk deklarasi manipulasi linked list harus menggunakan suatu pointer menunjuk ke node</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-buat-kode-program-single-linked-list-yang-nilai-data-di-input-user-sebanyak-10-inputan-tampilkan-nilai-single-linked-list-yang-sudah-di-input-oleh-user">8.
+                                            2 Buat kode program single linked list yang nilai data di input user sebanyak 10 inputan tampilkan nilai.single linked list yang sudah di input oleh user</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengetahuan-tentang-linked-list">9.
+                                            Pengetahuan tentang linked list?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buat-makalah-tentang-sistem-bilangan-array-dimensi-3d-an-linked-list%e2%80%8b">10.
+                                            Buat makalah tentang Sistem Bilangan, Array Dimensi 3,d an Linked List​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#terdapat-simpul-jklm-dengan-tipe-double-linked-list-non-circular-gambarlah-simpul-tersebut-dengan-menambahkan-simpul-dari-belakang-secara-satu-persatu-yaitu-simpul-e-dan-f-dan-menghapus-m-dan-ber">11.
+                                            Terdapat simpul J,K,L,M dengan tipe Double linked list non circular , gambarlah simpul tersebut dengan menambahkan simpul dari belakang secara satu persatu yaitu simpul E dan F dan menghapus M dan Berikan keterangan posisi head dan Tailnya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-double-linked-list-dengan-simpul-berupa-data-mahasiswa-yang-terdiri-dari-nrp-nama-dan-kelas-buatlah-operasi-sisip-secara-terurut-hapus-data-mahasiswa-tertentu-dan-update-data-nama-dan-kel">12.
+                                            Buatlah double linked list dengan simpul berupa data mahasiswa yang terdiri dari NRP, Nama dan Kelas.  Buatlah operasi Sisip secara terurut, Hapus data mahasiswa tertentu dan Update data (nama dan kelas saja)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-jelaskan-persamaan-linked-list-dan-stack">13.
+                                            1) jelaskan persamaan linked list dan stack</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-secara-rinci-tahapan-proses-insert-dan-delete-pada-single-linked-list-lalu-lakukan-scenario-berikut-inisiasi-linked-list-1-5-8-13-25-head-1-tail-25-berikan-screenshotinsert9">14.
+                                            Jelaskan secara rinci tahapan proses insert dan delete pada Single Linked list! 
+Lalu lakukan scenario berikut :
+Inisiasi linked list 1 5 8 13 25 -&gt; head = 1, tail 25 (berikan screenshot)
+Insert(9) (berikan screenshot)
+Insert(42) (berikan screenshot)
+DeleteTail() (berikan screenshot)
+DeleteHead (berikan screenshot)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-program-double-linked-list-c-dengan-ketentuan-1-user-dapat-input-data-berupa-menambahkan-data-tambah-depan-dan-tambah-belakang-menghapus-data-hapus-depan-menampilkan-data-keluar-d">15.
+                                            Buatlah program double linked list C++ dengan ketentuan : 
+1. User dapat input data berupa menambahkan data (tambah depan dan tambah belakang), menghapus data (hapus depan), menampilkan data, keluar dari program
+2. Data yang di input hanya berupa nama barang dan harga barang
+3. Buat function untuk menghitung total harga barang yang di input kan </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-linked-list-tanpa-sumpul-head%e2%80%8b">16.
+                                            apa yang dimaksud linked list tanpa sumpul head?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kasus-masalah-seperti-apa-yang-cocok-untuk-menerapkan-konsep-dari-linked-list-berikan-contohnya-mohon-bantuannya-untuk-uas">17.
+                                            kasus masalah seperti apa yang cocok untuk menerapkan konsep dari Linked List? Berikan contohnya? 
+ mohon bantuannya untuk UAS</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#untuk-mengecek-daftr-akunlangkah-setelah-klik-command-centre-dan-account-list-adalah-akan-muncul-jendela-a-edit-account-b-easy-assistant-c-account-list-d-linked-account-e-cheque-account">18.
+                                            Untuk mengecek daftr akun,langkah setelah klik command centre dan account list adalah akan muncul jendela... A. Edit account B. Easy assistant C. Account list D. Linked account E. Cheque account</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cara-kerja-linked-list-adalah%e2%80%8b">19.
+                                            cara kerja linked list adalah?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-hubungan-antara-linked-list-dan-tree-dalam-struktur-data">20.
+                                            Apa  hubungan antara linked list dan tree dalam struktur data?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jalur-transimisi-datainformasi-antar-node-disebut-a-list-b-link-c-linked-d-lift%e2%80%8b">21.
+                                            Jalur transimisi data/informasi antar-node disebut A. LIST B. LINK C. LINKED D. LIFT​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-perbedaan-linked-list-dengan-array%e2%80%8b">22.
+                                            jelaskan perbedaan linked list dengan array​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#definisi-linked-list">23.
+                                            definisi linked list</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-linked-list-yang-dimana-pada-setiap-node-memiliki-banyak-pointer-adalah-pengertian-dari-%e2%80%8b">24.
+                                            3. Linked List yang dimana pada setiap node memiliki banyak pointer adalah pengertian dari...​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#stack-queue-serta-list-dan-multilist-termasuk-dalam-kategori-struktur-data-a-linearb-no-linearc-dinamisd-linked-listtolong-bantu-jawab-ya">25.
+                                            Stack, Queue, serta List dan Multilist termasuk dalam kategori struktur data ....
+a. Linear
+b. No Linear
+c. Dinamis
+d. Linked List
+Tolong bantu jawab ya..</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jika-kita-ingin-menyimpan-data2-mahasiswa-yang-masing2-terdiri-atas-3-field-yaitu-nama-nim-dan-kelas-menggunakan-struktur-data-double-linked-list-bagaimana-cara-mendeklarasikannya-menggunakan-bhs">26.
+                                            Jika kita ingin menyimpan data2 mahasiswa yang masing2 terdiri atas 3 field yaitu : Nama, NIM dan Kelas menggunakan struktur data double linked list, bagaimana cara mendeklarasikannya menggunakan bhs C</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#single-linked-list-with-dummy-node-butuh-pengertiannya-mohon-dibantu">27.
+                                            Single linked list with dummy node,,, butuh pengertiannya mohon dibantu </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-sebuah-linked-list-non-circular-yang-berisi-nim-anda-dan-nama-lengkap-anda-mohon-bantuannya-kak">28.
+                                            Buatlah sebuah Linked list non circular yang berisi nim anda dan nama lengkap anda.
+Mohon bantuannya kak.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-program-single-linked-list-sederhana-untuk-merecord-nama-siswa">29.
+                                            contoh program single linked list sederhana untuk merecord nama siswa</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#singly-linked-list-doubly-linked-list-dan-circular-linked-list-memiliki-perbedaan-pada-proses-kunjungan-tiap-tiap-node-di-dalam-satu-waktu-yang-disebut-proses-a-visitor-b-travel-c-traversal-d-ex">30.
+                                            Singly linked list, doubly linked list, dan circular linked list memiliki perbedaan pada proses kunjungan tiap-tiap node di dalam satu waktu yang disebut proses a. visitor b. travel C. traversal d. excursions​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-sebuah-program-python-single-linked-list-yang-dapat-melakukan-operasi-insert-depan-insert-belakang-hapus-depan-hapus-belakang-hapus-semua-tampilkan-data-%e2%80%8b">31.
+                                            Buatlah sebuah program python single Linked list yang dapat melakukan operasi Insert Depan, Insert Belakang, Hapus Depan, Hapus Belakang, Hapus semua, Tampilkan Data.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-dan-jelaskan-kekurangan-dan-kelebihan-dari-arraylinked-liststackpointerinflix-prefixposefixsortingsearching-tree-dan-quean">32.
+                                            Sebutkan dan jelaskan kekurangan dan kelebihan dari array,Linked list,stack,pointer,inflix prefix,posefix,sorting,searching, tree dan quean.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#java-susunlah-source-code-program-untuk-menyimpan-data-berikut-ke-dalam-sebuah-linked-list-%e2%80%9cmahasiswa%e2%80%9d-12-3-14-22-7-%e2%80%9crara%e2%80%9d-%e2%80%98%e2%80%99%e2%80%8b">33.
+                                            (Java) Susunlah source code program untuk menyimpan data berikut ke dalam sebuah linked list: “Mahasiswa”, 12, 3.14, 22, 7, “Rara”, ‘#’​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#keluaran-dari-kode-berikut-ini-adalah-list-a-b-c-123-for-i-in-rangelenlist-for-j-in-rangellenlisti-printlistijend%e2%80%8b">34.
+                                            Keluaran dari kode berikut ini adalah? list = [['a, b, c ],[1,2,3]] for i in range(len(list)): for j in rangellen(list[i])): print(list[i][j],end="")​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#elemen-node-dari-suatu-linked-list-terdiri-dari-2-bagian-yaitu">35.
+                                            elemen (node) dari suatu linked list terdiri dari 2 bagian yaitu ....</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#untuk-menyisipkan-node-dalam-linked-list-digunakan-prosedur%e2%80%8b">36.
+                                            untuk menyisipkan node dalam linked list digunakan prosedur​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-menghubungkan-beberapa-simpul-dalam-single-linked-list%e2%80%8b">37.
+                                            bagaimana cara menghubungkan beberapa simpul dalam single linked list​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-jika-tailnull-kondisi-linked-listadalah-a-terisib-penuhc-kosongd-tidak-dapat-ditambahmohon-jawab-ya-kaka%e2%80%8b">38.
+                                            9. Jika tail=null, kondisi Linked Listadalah ....a. terisib. penuhC. kosongd. tidak dapat ditambahmohon jawab ya kaka​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tahapan-proses-insert-dan-delete-pada-single-linked-list">39.
+                                            Tahapan proses insert dan delete pada single linked list</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebuah-linked-list-mempunyai-sepuluh-simpul-apakah-boleh-langsung-akses-ke-simpul-kelima">40.
+                                            Sebuah linked list mempunyai sepuluh simpul. Apakah boleh langsung akses ke simpul kelima?</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-single-linked-list-dengan-double-linked-listserta-contoh-masing-masing">
+                            1. apa perbedaan single linked list dengan double linked list
+serta contoh masing masing</h2><br />
+                        <p> jawaban</p><p>Perbedaan Singly Linked List, Double Linked List, Dan Circular Linked List</p><p>1. Singly Linked List merupakan suatu linked list yang hanya memiliki satu variabel pointer saja. Dimana pointer tersebut menunjuk ke node selanjutnya, biasanya field pada tail menunjuk ke NULL.</p><p>2. Doubly Linked List merupakan suatu linked list yang memiliki dua variabel pointer yaitu pointer yang menunjuk ke node selanjutnya dan pointer yang menunjuk ke node sebelumnya. Setiap head dan tailnya juga menunjuk ke NULL.</p><p>3. Circular Linked List merupakan suatu linked list dimana tail (node terakhir) menunjuk ke head (node pertama). Jadi tidak ada pointer yang menunjuk </p><p> penjelasan</p><p>maaf ya kalu salah hanya itu saja yang aku tahu</p><br />
+                                            <h2 class="ez-toc-section" id="linked-list-single-double-bedanya-apa">
+                            2. Linked list single double bedanya apa?</h2><br />
+                        <p>single linked list hanya bisa maju ke data selanjutnya namun tidak bisa kembali ke data sebelumnya karena tidak ada node yang digunakan untuk mundur ke data tersebut</p><p>single linked list hanya memiliki head yang merupakan kepala / awal dari suatu rangkaian data dan digunakan untuk awalan lintasan maju</p><p>contoh:</p><p>HEAD -&gt; data1 -&gt; data2 -&gt; data3 -&gt; NULL</p><p></p><p>double linked list bisa melintas maju dan mundur ke data sebelum dan sesudahnya karena ada node yang menghubungkannya</p><p>double linked list memiliki head dan tail, fungsi head sama dengan yang ada di single linked list, sedangkan tail adalah ekor / akhir dari suatu rangkaian data</p><p>contoh:</p><p>HEAD ⇄ data1 ⇄ data2 ⇄ data3 ⇄ TAIL</p><p>*note:</p><p> head-&gt;prev = NULL; TAIL-&gt;next = NULL;</p><p></p><p></p><p></p><p>maaf kalau membingungkan</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-kegunaan-pointer-head-pada-sebuah-linked-list-apa-kegunaan-pointer-tail-pada-sebuah-linked-list">
+                            3. apa kegunaan pointer head pada sebuah linked list?
+ Apa kegunaan pointer tail pada sebuah linked list?</h2><br />
+                        <p>Jawaban: Pointer HEAD menunjuk pada node pertama di dalam linked list itu sendiri dan pointer TAIL yang menunjuk pada node paling akhir di dalam linked list.</p><p></p><p>Penjelasan:</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="bentuk-deklarasi-manipulasi-linked-list-harus-menggunakan-suatu-pointer">
+                            4. Bentuk deklarasi manipulasi linked list harus menggunakan suatu pointer?</h2><br />
+                        <p><strong>Teknologi informatika </strong>merupakan salah satu ilmu yang membahas tentang berbagai hal yang berkaitan dengan jaringan dan komputer. Berdasarkan soal, dapat disimpulkan bahwa <strong>deklarasi manipulasi linked list</strong> harus menggunakan suatu pointer head note.</p><p></p><p><strong>Pembahasan:</strong></p><p>TIK berkembang seiring dengan perkembangan zaman. Manusia memerlukan TIK. <strong>Teknologi informatika </strong>merupakan salah satu ilmu yang membahas tentang berbagai hal yang berkaitan dengan jaringan dan komputer. </p><p><strong>Pelajari lebih lanjut</strong></p><p>Materi tentang pengertian TIK brainly.co.id/tugas/2038123</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ4</strong></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-dengan-tranversal-pada-operasi-linked-list">
+                            5. Apa yang di maksud dengan tranversal pada operasi linked list</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Traversal atau kunjungan simpul list sesuai urutan untuk memproses setiap simpul tepat satu kali. akan menggerakkan penuding ke simpul berikutnya</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah</p><br />
+                                            <h2 class="ez-toc-section" id="kelebihan-dan-kekurangan-circular-linked-list">
+                            6. kelebihan dan kekurangan Circular Linked list </h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Kelebihan </p><p>1. Jenis data yang berbeda dapat di Link</p><p>2. Operasi REMOVE atau INSERT hanya dilakukan dengan mengubah pointer-nya saja</p><p>Kerugian </p><p>1. Diperlukan ruang tambahan untuk menyatakan/tempat field pointer</p><p>2. Diperlukan waktu yang lebih banyak untuk mencari suatu node dalam linked list.</p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="bentuk-deklarasi-manipulasi-linked-list-harus-menggunakan-suatu-pointer-menunjuk-ke-node">
+                            7. bentuk deklarasi manipulasi linked list harus menggunakan suatu pointer menunjuk ke node</h2><br />
+                        <p><strong>Teknologi informatika </strong>merupakan salah satu ilmu yang membahas tentang berbagai hal yang berkaitan dengan jaringan dan komputer. Berdasarkan soal, dapat disimpulkan bahwa <strong>bentuk deklarasi manipulasi linked list </strong>harus menggunakan suatu pointer menunjuk ke node yaitu salah satu bentuk struktur data, berisi kumpulan data (node) yang tersusun secara sekuensial, dan saling sambung menyambung.</p><p></p><p><strong>Pembahasan:</strong></p><p>TIK bisa kita jumpai dalam berbagai hal. TIK dapat mempermudah manusia. <strong>Teknologi informatika </strong>merupakan salah satu ilmu yang membahas tentang berbagai hal yang berkaitan dengan jaringan dan komputer. </p><p><strong>Pelajari lebih lanjut</strong></p>Materi tentang pengertian TIK brainly.co.id/tugas/2038123Materi tentang komponen elektronika brainly.co.id/tugas/2044605Materi tentang teknik elektronika brainly.co.id/tugas/2764979<p><strong>Detail Jawaban</strong></p><p><strong>Kelas : 9</strong></p><p><strong>Mapel : TI</strong></p><p><strong>Bab : Alat Elektronika Analog</strong></p><p><strong>Kode : -</strong></p><p><strong></strong></p><p><strong>#AyoBelajar</strong></p><p><strong>#SPJ5</strong></p><br />
+                                            <h2 class="ez-toc-section" id="2-buat-kode-program-single-linked-list-yang-nilai-data-di-input-user-sebanyak-10-inputan-tampilkan-nilai-single-linked-list-yang-sudah-di-input-oleh-user">
+                            8. 2 Buat kode program single linked list yang nilai data di input user sebanyak 10 inputan tampilkan nilai.single linked list yang sudah di input oleh user</h2><br />
+                        <p>Linked List merupakan koleksi linear dari data, yang disebut sebagai nodes, dimana setiap node akan menunjuk pada node lain melalui sebuah pointer. Linked List dapat didefinisikan pula sebagai kumpulan nodes yang merepresentasikan sebuah sequence.</p><p></p><p>Representasi sebuah linked list dapat digambarkan melalui <strong>g</strong><strong>a</strong><strong>m</strong><strong>b</strong><strong>a</strong><strong>r</strong><strong> </strong><strong>d</strong><strong>i</strong><strong> </strong><strong>a</strong><strong>t</strong><strong>a</strong><strong>s</strong>.</p><p></p><p>Sebuah linked list yang hanya memiliki 1 penghubung ke node lain disebut sebagai single linked list.</p><p></p><p>Di dalam sebuah linked list, ada 1 pointer yang menjadi gambaran besar, yakni pointer HEAD yang menunjuk pada node pertama di dalam linked list itu sendiri.</p><p></p><p>Sebuah linked list dikatakan kosong apabila isi pointer head adalah NULL.</p><p></p><p>Beberapa operasi yang biasanya ada di dalam sebuah linked list adalah:</p><p></p>Push<p></p><p>Push merupakan sebuah operasi insert dimana di dalam linked list terdapat 2 kemungkinan insert, yaitu insert melalui depan (pushDepan) ataupun belakang (pushBelakang). Operasi pushDepan berarti data yang paling baru dimasukkan akan berada di depan data lainnya, dan sebaliknya pushBelakang berarti data yang paling baru akan berada di belakang data lainnya.</p><p></p><p>Representasinya adalah sebagai berikut:</p><p></p><p>pushDepan: 5, 3, 7, 9 maka hasilnya adalah: 9 -&gt;7 -&gt;3 -&gt; 5 -&gt; NULL</p><p>pushBelakang: 5, 3, 7, 9 maka hasilnya adalah: 5 -&gt;3 -&gt;7 -&gt;9 -&gt; NULL</p><p></p>Pop<p></p><p>Pop, kebalikan dari push, merupakan operasi delete, dimana di dalam linked list memiliki 2 kemungkinan delete, yaitu melalui depan (popDepan) dan melalui belakang (popBelakang). PopDepan berarti data yang akan dihapus adalah data paling depan, dan popBelakang berarti data yang akan dihapus adalah data paling belakang (akhir).</p><p></p><p>Dalam penerapan code single linked list, umumnya hanya digunakan pointer head sebagai pointer yang menunjuk pada linked list. Namun dalam pembahasan artikel ini akan digunakan 1 pointer tambahan, yakni TAIL untuk menunjuk data terakhir di dalam linked list dalam mempermudah proses pembahasan.</p><p></p><p>Dalam artikel ini, pembahasan code menggunakan Bahasa Pemrograman C dengan library malloc.h.</p><p></p><p>Apabila didefinisikan sebuah linked list ada di <strong>g</strong><strong>a</strong><strong>m</strong><strong>b</strong><strong>a</strong><strong>r</strong><strong> </strong><strong>k</strong><strong>e</strong><strong>d</strong><strong>u</strong><strong>a</strong><strong> </strong><strong>s</strong><strong>a</strong><strong>m</strong><strong>p</strong><strong>a</strong><strong>i</strong><strong> </strong><strong>k</strong><strong>e</strong><strong>e</strong><strong>n</strong><strong>a</strong><strong>m</strong>.</p><br />
+                                            <h2 class="ez-toc-section" id="pengetahuan-tentang-linked-list">
+                            9. Pengetahuan tentang linked list?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>cara untuk meyimpan data sehingga bisa otomatis membuat tempat baru untuk meyimpan data yang diperlukan</p><p><strong>Penjelasan:</strong></p><p></p><p><strong>Jawaban:</strong></p><p>Linked List adalah suatu struktur data linier. Berbeda dengan array yang juga merupakan struktur data linier dan tipe data komposit, linked list dibentuk secara dinamik. Pada saat awal program dijalankan elemen linked list belum data. Elemen linked list (disebut node) dibentuk sambil jalan sesuai instruksi.</p><p></p><p></p><p></p><p><strong>Penjelasan:</strong></p><p>#semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="buat-makalah-tentang-sistem-bilangan-array-dimensi-3d-an-linked-list%e2%80%8b">
+                            10. Buat makalah tentang Sistem Bilangan, Array Dimensi 3,d an Linked List​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>vxhchkfiyficchxjckkchkvckhxkkxccclclhchllhclhllclflkkkd</p><br />
+                                            <h2 class="ez-toc-section" id="terdapat-simpul-jklm-dengan-tipe-double-linked-list-non-circular-gambarlah-simpul-tersebut-dengan-menambahkan-simpul-dari-belakang-secara-satu-persatu-yaitu-simpul-e-dan-f-dan-menghapus-m-dan-ber">
+                            11. Terdapat simpul J,K,L,M dengan tipe Double linked list non circular , gambarlah simpul tersebut dengan menambahkan simpul dari belakang secara satu persatu yaitu simpul E dan F dan menghapus M dan Berikan keterangan posisi head dan Tailnya​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;E&lt;--&gt;F</p><p>J=head</p><p>F=tail</p><p><strong>Penjelasan:</strong></p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;M</p><p>E</p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;M&lt;-E</p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;M&lt;--&gt;E</p><p>F</p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;M&lt;--&gt;E&lt;-F</p><p>J&lt;--&gt;K&lt;--&gt;L&lt;--&gt;M&lt;--&gt;E&lt;--&gt;F</p><p>J&lt;--&gt;</p><p>K&lt;--&gt;</p><p>L&lt;--&gt;E&lt;--&gt;F</p><p>(M)</p><p>L-&gt;E(M-&gt;E)</p><p>E&lt;-L(M&lt;-L)</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-double-linked-list-dengan-simpul-berupa-data-mahasiswa-yang-terdiri-dari-nrp-nama-dan-kelas-buatlah-operasi-sisip-secara-terurut-hapus-data-mahasiswa-tertentu-dan-update-data-nama-dan-kel">
+                            12. Buatlah double linked list dengan simpul berupa data mahasiswa yang terdiri dari NRP, Nama dan Kelas.  Buatlah operasi Sisip secara terurut, Hapus data mahasiswa tertentu dan Update data (nama dan kelas saja)</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>poin 25 buat soal ini sangat keren!!</p><br />
+                                            <h2 class="ez-toc-section" id="1-jelaskan-persamaan-linked-list-dan-stack">
+                            13. 1) jelaskan persamaan linked list dan stack</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Linked list memiliki keunggulan dibanding array yaitu dalam penggunaan alokasi memory , stack adalah teknik khusus yang digunakan untuk menghemat pemakaian memory dalam pembuatan dua stack dengan array</p><p></p><p>Intinya linked list dan stack adalah suatu sistem pengalokasi memory dengan hemat dan cepat</p><p></p><p></p><p></p><p><strong>#SALAMJQHACKING</strong></p><p>#STAYATHOME</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-secara-rinci-tahapan-proses-insert-dan-delete-pada-single-linked-list-lalu-lakukan-scenario-berikut-inisiasi-linked-list-1-5-8-13-25-head-1-tail-25-berikan-screenshotinsert9">
+                            14. Jelaskan secara rinci tahapan proses insert dan delete pada Single Linked list! 
+Lalu lakukan scenario berikut :
+Inisiasi linked list 1 5 8 13 25 -&gt; head = 1, tail 25 (berikan screenshot)
+Insert(9) (berikan screenshot)
+Insert(42) (berikan screenshot)
+DeleteTail() (berikan screenshot)
+DeleteHead (berikan screenshot)</h2><br />
+                        <p>Single Linked List adalah struktur data yang terdiri dari simpul-simpul yang memiliki pointer ke simpul selanjutnya. Setiap simpul terdiri dari dua bagian yaitu data dan pointer yang menunjuk ke simpul selanjutnya. Dalam single linked list, penambahan atau penghapusan elemen dapat dilakukan di awal, tengah, atau akhir list.</p><p></p><p>Berikut ini adalah tahapan proses insert dan delete pada single linked list:</p><p></p><p>1. Insert:</p><p>a. Insert di awal list:</p><p></p><p>Buat simpul baru dengan data yang ingin dimasukkan.</p><p>Atur pointer simpul baru untuk menunjuk ke simpul awal saat ini (head).</p><p>Atur head untuk menunjuk ke simpul baru.</p><p>b. Insert di tengah list:</p><p></p><p>Cari simpul sebelum simpul yang ingin dimasukkan.</p><p>Buat simpul baru dengan data yang ingin dimasukkan.</p><p>Atur pointer simpul baru untuk menunjuk ke simpul yang akan dituju.</p><p>Atur pointer simpul sebelumnya untuk menunjuk ke simpul baru.</p><p>c. Insert di akhir list:</p><p></p><p>Buat simpul baru dengan data yang ingin dimasukkan.</p><p>Atur pointer simpul akhir saat ini (tail) untuk menunjuk ke simpul baru.</p><p>Atur pointer simpul baru untuk menunjuk ke null.</p><p></p><p>2. Delete:</p><p>a. Delete di awal list:</p><p></p><p>Simpan data simpul awal saat ini (head).</p><p>Atur head untuk menunjuk ke simpul kedua.</p><p>Hapus simpul awal.</p><p>b. Delete di tengah list:</p><p></p><p>Cari simpul sebelum simpul yang akan dihapus.</p><p>Atur pointer simpul sebelumnya untuk menunjuk ke simpul setelah simpul yang akan dihapus.</p><p>Hapus simpul yang ingin dihapus.</p><p>c. Delete di akhir list:</p><p></p><p>Cari simpul sebelum simpul akhir saat ini (tail).</p><p>Atur pointer simpul sebelumnya untuk menunjuk ke null.</p><p>Simpan data simpul akhir saat ini.</p><p>Hapus simpul akhir.</p><p>Berikut adalah implementasi dari scenario yang diberikan:</p><p></p><p>// Inisiasi linked list 1 5 8 13 25</p><p>class Node {</p><p>public:</p><p>    int data;</p><p>    Node* next;</p><p>};</p><p></p><p>Node* head = NULL;</p><p>Node* tail = NULL;</p><p></p><p>void insert(int newData) {</p><p>    Node* newNode = new Node();</p><p>    newNode-&gt;data = newData;</p><p>    newNode-&gt;next = NULL;</p><p></p><p>    if (head == NULL) {</p><p>        head = newNode;</p><p>        tail = newNode;</p><p>    } else {</p><p>        tail-&gt;next = newNode;</p><p>        tail = newNode;</p><p>    }</p><p>}</p><p></p><p>void deleteHead() {</p><p>    Node* temp = head;</p><p>    if (head == NULL) {</p><p>        return;</p><p>    }</p><p>    if (head == tail) {</p><p>        head = NULL;</p><p>        tail = NULL;</p><p>    } else {</p><p>        head = head-&gt;next;</p><p>    }</p><p>    delete temp;</p><p>}</p><p></p><p>void deleteTail() {</p><p>    Node* temp = head;</p><p>    if (head == NULL) {</p><p>        return;</p><p>    }</p><p>    if (head == tail) {</p><p>        head = NULL;</p><p>        tail = NULL;</p><p>    } else {</p><p>        while (temp-&gt;next != tail) {</p><p>            temp = temp-&gt;next;</p><p>        }</p><p>        temp-&gt;next = NULL;</p><p>        tail = temp;</p><p>    }</p><p>    delete temp;</p><p>}</p><p></p><p>int main() {</p><p>    // Inisiasi linked list</p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-program-double-linked-list-c-dengan-ketentuan-1-user-dapat-input-data-berupa-menambahkan-data-tambah-depan-dan-tambah-belakang-menghapus-data-hapus-depan-menampilkan-data-keluar-d">
+                            15. Buatlah program double linked list C++ dengan ketentuan : 
+1. User dapat input data berupa menambahkan data (tambah depan dan tambah belakang), menghapus data (hapus depan), menampilkan data, keluar dari program
+2. Data yang di input hanya berupa nama barang dan harga barang
+3. Buat function untuk menghitung total harga barang yang di input kan </h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut ini adalah contoh implementasi program double linked list di C++ dengan ketentuan yang telah ditentukan:</p><p><strong>Penjelasan:</strong></p><p>#include &lt;iostream&gt;</p><p>using namespace std;</p><p></p><p>// Membuat struktur data barang</p><p>struct Barang {</p><p>  string nama;</p><p>  int harga;</p><p>};</p><p></p><p>// Membuat elemen double linked list</p><p>struct Node {</p><p>  Barang data;</p><p>  Node *prev, *next;</p><p>};</p><p></p><p>// Membuat kelas double linked list</p><p>class DoubleLinkedList {</p><p>  private:</p><p>    Node *head, *tail;</p><p></p><p>  public:</p><p>    // Konstruktor</p><p>    DoubleLinkedList() {</p><p>      head = NULL;</p><p>      tail = NULL;</p><p>    }</p><p></p><p>    // Menambahkan elemen baru di awal double linked list</p><p>    void addFirst(Barang data) {</p><p>      // Membuat elemen baru</p><p>      Node *newNode = new Node;</p><p>      newNode-&gt;data = data;</p><p>      newNode-&gt;prev = NULL;</p><p>      newNode-&gt;next = NULL;</p><p></p><p>      // Menambahkan elemen baru ke double linked list</p><p>      if (head == NULL) {</p><p>        // Jika double linked list kosong, maka elemen baru menjadi head dan tail</p><p>        head = newNode;</p><p>        tail = newNode;</p><p>      } else {</p><p>        // Jika double linked list tidak kosong, maka elemen baru menjadi head dan head sebelumnya menjadi elemen selanjutnya dari elemen baru</p><p>        newNode-&gt;next = head;</p><p>        head-&gt;prev = newNode;</p><p>        head = newNode;</p><p>      }</p><p>    }</p><p></p><p>    // Menambahkan elemen baru di akhir double linked list</p><p>    void addLast(Barang data) {</p><p>      // Membuat elemen baru</p><p>      Node *newNode = new Node;</p><p>      newNode-&gt;data = data;</p><p>      newNode-&gt;prev = NULL;</p><p>      newNode-&gt;next = NULL;</p><p></p><p>      // Menambahkan elemen baru ke double linked list</p><p>      if (tail == NULL) {</p><p>        // Jika double linked list kosong, maka elemen baru menjadi head dan tail</p><p>        head = newNode;</p><p>        tail = newNode;</p><p>      } else {</p><p>        // Jika double linked list tidak kosong, maka elemen baru menjadi tail dan tail selanjutnya menjadi elemen sebelumnya dari elemen baru</p><p>        newNode-&gt;prev = tail;</p><p>        tail-&gt;next = newNode;</p><p>        tail = newNode;</p><p>      }</p><p>    }</p><p></p><p>    // Menghapus elemen di awal double linked list</p><p>    void removeFirst() {</p><p>      if (head == NULL) {</p><p>        // Jika double linked list kosong, tidak ada yang bisa dihapus</p><p>        cout &lt;&lt; "Double linked list kosong" &lt;&lt; endl;</p><p>      } else if (head == tail) {</p><p>        // Jika double linked list hanya memiliki satu elemen, hapus elemen tersebut dan buat head dan tail menjadi NULL</p><p>        Node *temp = head;</p><p>        head = NULL;</p><p>        tail = NULL;</p><p>        delete temp;</p><p>     </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-linked-list-tanpa-sumpul-head%e2%80%8b">
+                            16. apa yang dimaksud linked list tanpa sumpul head?​</h2><br />
+                        <p>Linked List adalah suatu struktur data linier. Berbeda dengan array yang juga merupakan struktur data linier dan tipe data komposit, linked list dibentuk secara dinamik. Pada saat awal program dijalankan elemen linked list belum data. Elemen linked list (disebut node) dibentuk sambil jalan sesuai instruksi.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="kasus-masalah-seperti-apa-yang-cocok-untuk-menerapkan-konsep-dari-linked-list-berikan-contohnya-mohon-bantuannya-untuk-uas">
+                            17. kasus masalah seperti apa yang cocok untuk menerapkan konsep dari Linked List? Berikan contohnya? 
+ mohon bantuannya untuk UAS</h2><br />
+                        Data yang bersifat uniform (seragam/sama) tetapi dengan jumlah data yang tidak diketahui sebelumnya, dan dapat ditambah/dikurangi pada saat program dijalankan<br />
+                                            <h2 class="ez-toc-section" id="untuk-mengecek-daftr-akunlangkah-setelah-klik-command-centre-dan-account-list-adalah-akan-muncul-jendela-a-edit-account-b-easy-assistant-c-account-list-d-linked-account-e-cheque-account">
+                            18. Untuk mengecek daftr akun,langkah setelah klik command centre dan account list adalah akan muncul jendela... A. Edit account B. Easy assistant C. Account list D. Linked account E. Cheque account</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>E. cheque account</p><p><strong>Penjelasan:</strong></p><p>maap klo slh</p><br />
+                                            <h2 class="ez-toc-section" id="cara-kerja-linked-list-adalah%e2%80%8b">
+                            19. cara kerja linked list adalah?​</h2><br />
+                        <p>Jawaban:</p><p>Menyimpan alamat/referensi dari record selanjutnya (dalam urutan).</p><br />
+                                            <h2 class="ez-toc-section" id="apa-hubungan-antara-linked-list-dan-tree-dalam-struktur-data">
+                            20. Apa  hubungan antara linked list dan tree dalam struktur data?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Linked List dan Tree adalah struktur data yang merupakan bagian dari graph theory.</p><p><strong>Penjelasan:</strong></p><p>Graph theory adalah studi struktur data dimana setiap entitas direpresentasikan dalam bentuk node/vertice dan memiliki relasi yang direpresentasikan dalam bentuk edges antar node. Linked list adalah kumpulan node yang saling terhubung dengan aturan tertentu. Jumlah hubungan satu node ke node yang lain tidak dibatasi pada Linked list namun linked list memerlukan penanda node yang menjadi awal dan akhir iterasi. Tree adalah graph yang tidak memiliki loop antar nodenya sehingga path ke sebuah node ke node lainnya hanya 1 cara saja.</p><br />
+                                            <h2 class="ez-toc-section" id="jalur-transimisi-datainformasi-antar-node-disebut-a-list-b-link-c-linked-d-lift%e2%80%8b">
+                            21. Jalur transimisi data/informasi antar-node disebut A. LIST B. LINK C. LINKED D. LIFT​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Jalur transmisi data/informasi antar-node disebut:</p><p>B. LINK</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-perbedaan-linked-list-dengan-array%e2%80%8b">
+                            22. jelaskan perbedaan linked list dengan array​</h2><br />
+                        <p>Perbedaan <strong>array</strong> dan <strong>linked list</strong> adalah sebagai berikut:</p><strong>Array</strong><strong> </strong>merupakan struktur data berbasis indeks, setiap elemen dalam <strong>array</strong><strong> </strong>terkait dengan indeks tersebut. Sementara itu, <strong>linked list</strong> bergantung pada referensi. Node-node dalam<strong> linked list</strong> terdiri dari data dan referensi ke elemen data yang lain. <strong>Array</strong> adalah kumpulan objek data yang mirip satu sama lain dan disimpan di lokasi memori secara berurutan. Sementara itu, <strong>linked list</strong><strong> </strong>merupakan sekumpulan data yang berisi urutan elemen dalam strukturnya. Setiap elemen saling terkait dengan elemen berikutnya. Pembahasan:<p><strong>Array</strong> merupakan istilah yang akrab dengan ilmu komputer. <strong>Array</strong> dapat kita temukan dalam berbagai bahasa pemrograman mulai dari Java, C, hingga PHP. Terdapat <strong>array</strong> satu dimensi dan<strong> array</strong><strong> </strong>dua dimensi yang memiliki fungsi berbeda. </p><p><strong>Array</strong> adalah tipe data yang terstruktur, gunanya untuk menyimpan data-data dengan tipe serupa. <strong>Array</strong> memiliki banyak variabel dalam strukturnya, namun dengan tipe data yang sama. Masing-masing variabel dalam <strong>array</strong> memiliki nilai indeks. </p><p>Kita dapat mengakses data dalam <strong>array</strong> melalui nomor indeks tertentu. Nomor indeks ini dimulai dari 0, untuk mengaksesnya harus menggunakan proses looping. </p><p><strong>Linked list</strong> adalah struktur data yang terdiri dari urutan record data. Setiap record dalam <strong>linked list</strong> memiliki field masing-masing untuk menyimpan alamat atau referensi dari record selanjutnya. Dalam<strong> </strong><strong>linked list</strong>, elemen data ini disebut node. </p><p>Dalam <strong>linked list</strong> ada juga istilah head dan tail. Head adalah elemen yang berada di posisi pertama<strong> </strong><strong>linked list</strong>. Tail adalah elemen terakhir dalam sebuah <strong>linked list</strong>. </p><p></p>Pelajari lebih lanjut:Samba server https://brainly.co.id/tugas/26958364Protokol jaringan https://brainly.co.id/tugas/19983255Sistem informasi berbasis komputer https://brainly.co.id/tugas/37178842<p></p>Detail Jawaban:<p>Kelas: 10</p><p>Mapel: TIK</p><p>Bab: Bab 6 - Mengenal Pemrograman Komputer</p><p>Kode: 10.11.6</p><p>#AyoBelajar #SPJ2</p><br />
+                                            <h2 class="ez-toc-section" id="definisi-linked-list">
+                            23. definisi linked list</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>cara untuk meyimpan data sehingga bisa otomatis membuat tempat baru untuk meyimpan data yang diperlukan</p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="3-linked-list-yang-dimana-pada-setiap-node-memiliki-banyak-pointer-adalah-pengertian-dari-%e2%80%8b">
+                            24. 3. Linked List yang dimana pada setiap node memiliki banyak pointer adalah pengertian dari...​</h2><br />
+                        <p><strong>Multiple Linked List</strong> merupakan suatu linked list yang memiliki lebih dari 2 buah variabel pointer. Linked List yang dimana pada setiap node memiliki banyak pointer adalah pengertian dari Multiple Linked List.</p><p><strong></strong></p><p><strong>Pembahasan:</strong></p><p><strong>Informatika</strong> dapat diartikan sebagai suatu ilmu mengenai studi perancangan, pengumpulan, klasifikasi, penyimpanan, pengeluaran, serta pengembangan sistem komputasi. Informatika juga mempelajari tentang prinsip-prinsip yang menjadi perancangan dan pengembangan sistem yang mengolah data, informasi, atau pengetahuan yang direkam hingga teknis penyebarannya.</p><p><strong>Ruang lingkup informatika</strong>, antara lain:</p><p>•	Teknik informatika</p><p>Teknik informatika mempelajari teknis dan penerapan sistem komputasi dan berbagai prinsip-prinsip yang menjadi perancangan serta pengembangan sistem pengolahannya (praktis namun umum).</p><p>•	Sistem Informasi</p><p>Sistem informasi mempelajari berbagai hal mengenai sistem informasi, yang merupakan produk konkret yang paling banyak digunakan di seluruh sektor industri.</p><p>•	Teknik Komputer</p><p>Teknik komputer merupakan ruang lingkup yang lebih fokus dalam mempelajari berbagai perangkat keras (hardware/gadget) yang digunakan dalam bidang informatika yang dapat meliputi instalasi jaringan komputer serta berbagai penyokongnya.</p><p>•	Ilmu Komputer</p><p>Ilmu komputer mempelajari sistem komputasi sebagai keilmuan dalam penelitian maupun bahan ajar, tidak berfokus pada penerapannya.</p><p>•	Manajemen Informatika</p><p>Manajemen informatika lebih berfokus pada mempelajari perencanaan, pengaturan, hingga evaluasi (quality control) suatu proyek pengembangan sistem informasi atau berhubungan langsung dengan penggunaan teknologi informasi untuk implementasinya di bidang manajemen.</p><p><strong>Pelajari lebih lanjut:</strong></p><p>Pelajari lebih lanjut materi tentang bidang informatika brainly.co.id/tugas/51764090</p><p><strong>#BelajarBersamaBrainly #SPJ4</strong></p><br />
+                                            <h2 class="ez-toc-section" id="stack-queue-serta-list-dan-multilist-termasuk-dalam-kategori-struktur-data-a-linearb-no-linearc-dinamisd-linked-listtolong-bantu-jawab-ya">
+                            25. Stack, Queue, serta List dan Multilist termasuk dalam kategori struktur data ....
+a. Linear
+b. No Linear
+c. Dinamis
+d. Linked List
+Tolong bantu jawab ya..</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>D. linked list</p><p><strong>Penjelasan:</strong></p><p>mohon mmaaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="jika-kita-ingin-menyimpan-data2-mahasiswa-yang-masing2-terdiri-atas-3-field-yaitu-nama-nim-dan-kelas-menggunakan-struktur-data-double-linked-list-bagaimana-cara-mendeklarasikannya-menggunakan-bhs">
+                            26. Jika kita ingin menyimpan data2 mahasiswa yang masing2 terdiri atas 3 field yaitu : Nama, NIM dan Kelas menggunakan struktur data double linked list, bagaimana cara mendeklarasikannya menggunakan bhs C</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>struct Mahasiwa{</p><p>     char nama[25];</p><p>     char nim[25];</p><p>     char kelas[25];</p><p>     struct Mahasiswa *next,*prev;</p><p>}*head,*tail;</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="single-linked-list-with-dummy-node-butuh-pengertiannya-mohon-dibantu">
+                            27. Single linked list with dummy node,,, butuh pengertiannya mohon dibantu </h2><br />
+                        Adalah sebuah LL(linked list) yang menggunakan sebuah variabel pointer saja untuk menyimpan banyak data dengan metode LL, suatu daftar isi yang saling berhubungan.<br /><br />maaf kalau salah.....<br />
+                                            <h2 class="ez-toc-section" id="buatlah-sebuah-linked-list-non-circular-yang-berisi-nim-anda-dan-nama-lengkap-anda-mohon-bantuannya-kak">
+                            28. Buatlah sebuah Linked list non circular yang berisi nim anda dan nama lengkap anda.
+Mohon bantuannya kak.</h2><br />
+                        <p>Program<strong> Linked list non circular </strong>menggunakan C++ adalah </p><p>#include &lt;iostream&gt;</p><p>#include &lt;conio.h&gt;</p><p>#include &lt;iomanip&gt; //setw()</p><p>using namespace std;</p><p>struct node</p><p>{</p><p>      int data;</p><p>      node* next; </p><p>};</p><p>node* head;</p><p>node* tail;</p><p>node* curr;</p><p>node* entry;</p><p>node* del;</p><p></p><p>void inisialisasi()</p><p>{</p><p>      head = NULL;</p><p>      tail = NULL;</p><p>}</p><p></p><p>void input(int dt)</p><p>{</p><p>      entry = (node* )malloc(sizeof(node)); </p><p>      entry-&gt;data = dt;</p><p>      entry-&gt;next = NULL;</p><p>      if(head==NULL)</p><p>      {</p><p>            head = entry;</p><p>            tail = head;</p><p>      }</p><p>      else</p><p>      {</p><p>            tail-&gt;next = entry;</p><p>            tail = entry;</p><p>      }</p><p>}</p><p></p><p>void hapus()</p><p>{</p><p>      int simpan;</p><p>      if(head==NULL)</p><p>      {</p><p>            cout&lt;&lt;"\nlinked list kosong, penghapusan tidak bisa dilakukan"&lt;&lt;endl;</p><p>      }</p><p>      else</p><p>      {</p><p>            simpan  = head -&gt;data;</p><p>            //hapus depan</p><p>            del = head;</p><p>            head = head-&gt;next;</p><p>            delete del;</p><p>           </p><p>            cout&lt;&lt;"\ndata yang dihapus adalah "&lt;&lt;simpan&lt;&lt;endl;</p><p>      }</p><p></p><p>}</p><p></p><p>void cetak()</p><p>{</p><p>      curr = head;</p><p>      if(head == NULL)</p><p>            cout&lt;&lt;"\ntidak ada data dalam linked list"&lt;&lt;endl;</p><p>      else</p><p>      {</p><p>            cout&lt;&lt;"\nData yang ada dalam linked list adalah"&lt;&lt;endl;</p><p>            cout&lt;&lt;setw(6);</p><p>            while(curr!=NULL)</p><p>            {</p><p>                  cout&lt;&lt;curr-&gt;data&lt;&lt;"-&gt;";</p><p>                  curr = curr-&gt;next;</p><p>            }</p><p>cout&lt;&lt;"NULL";</p><p>            cout&lt;&lt;endl;</p><p>      }</p><p>}</p><p><strong>Pembahasan</strong></p><p>Daftar tertaut adalah <strong>struktur data linier.</strong> Tidak seperti array, yang juga merupakan struktur data linier dan tipe data gabungan, daftar tertaut dibentuk secara dinamis. Saat program dimulai, item daftar tertaut tidak memiliki data. Elemen daftar tertaut (disebut node) dibentuk selama eksekusi sesuai dengan instruksi. Daftar tertaut adalah kumpulan elemen dari jenis yang sama dalam urutan tertentu, yang masing-masing terdiri dari dua bagian. Lokasi baru untuk menyimpan data yang Anda inginkan. Daftar tertaut menggunakan konsep "saling menunjuk". Maksudnya adalah setiap node yang ada selalu menunjuk ke alamat node yang paling dekat dengannya. Alamat disini adalah alamat dari node di memori komputer.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut materi tentang linked list: https://brainly.co.id/tugas/40324517</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-program-single-linked-list-sederhana-untuk-merecord-nama-siswa">
+                            29. contoh program single linked list sederhana untuk merecord nama siswa</h2><br />
+                        <p><strong>FIle singleLinkedList.java</strong></p><p>// AUTHOR : LordRimuruTempest</p><p>class node{</p><p>String namaSiswa; </p><p>node pointer;</p><p>public node(String namaSiswa){</p><p>this.namaSiswa = namaSiswa;</p><p>}</p><p>}</p><p>public class singleLinkedList {</p><p>node head, tail; int size = 0;</p><p>boolean isEmpty(){</p><p>return(size == 0);</p><p>}</p><p>void tambahData(node newData){</p><p>if(isEmpty()) head = tail = newData;</p><p>else{</p><p>tail.pointer = newData;</p><p>tail = newData;</p><p>}size++;</p><p>}</p><p>void hapusData(String nama){</p><p>node temp = head;</p><p>if(!isEmpty()){</p><p>if(head == tail &amp;&amp; temp.namaSiswa.equals(nama)) head = tail = null;</p><p>else{</p><p>if(nama.equals(head.namaSiswa)){</p><p>head = temp.pointer;</p><p>temp = null;</p><p>}else{</p><p>while(!temp.pointer.namaSiswa.equals(nama)){</p><p>temp = temp.pointer;</p><p>}</p><p>if(temp.pointer.pointer != null) temp.pointer = temp.pointer.pointer;</p><p>else temp.pointer = null;</p><p>}</p><p>}size--;</p><p>}else System.out.println("List Kosong !!");</p><p>}</p><p>void display(){</p><p>node temp = head; int nomor = 1;</p><p>System.out.println("DATA SISWA : ");</p><p>if(size != 0){</p><p>do{</p><p>System.out.println(nomor++ + ". " + temp.namaSiswa);</p><p>temp = temp.pointer;</p><p>}while(temp != null);</p><p>}else System.out.println("List Kosong !!");</p><p>}</p><p>}</p><p><strong>File menu.java</strong></p><p>/ AUTHOR : LordRimuruTempest</p><p>import java.util.Scanner;</p><p>public class menu {</p><p>public static void main(String[] args) {</p><p>Scanner input = new Scanner(System.in);</p><p>singleLinkedList list = new singleLinkedList();</p><p>boolean run = true; String inputan; int langkah = 1;</p><p>while(run){</p><p>System.out.println("LANGKAH KE-" + langkah++);</p><p>System.out.println("MENU : ");</p><p>System.out.println("1. Masukkan data siswa");</p><p>System.out.println("2. Hapus data siswa");</p><p>System.out.println("3. Tampilkan data");</p><p>System.out.println("4. keluar");</p><p>System.out.print("Pilihan(1/2/3/4) : "); inputan = input.nextLine();</p><p>if(inputan.equals("1")){</p><p>System.out.print("Masukkan nama siswa : "); inputan = input.nextLine();</p><p>list.tambahData(new node(inputan));</p><p>System.out.println(inputan + " telah ditambahkan ke sistem");</p><p>}else if(inputan.equals("2")){</p><p>System.out.print("Masukkan nama siswa : "); inputan = input.nextLine();</p><p>list.hapusData(inputan);</p><p>System.out.println(inputan + " telah dihapus dari sistem");</p><p>}else if(inputan.equals("3")) list.display();</p><p>else if(inputan.equals("4")) run = false;</p><p>}</p><p>}  </p><p>}</p><p></p>Pembahasan<p>Single linked list adalah salah satu jenis dari struktur data berupa deretan objek yang disebut objek node (mirip seperti kereta api yang terdiri atas beberapa gerbong, node dianggap sebagai satu gerbong dan linked list adalah keretanya). Program akan dibuat dengan bahasa java. Pada dasarnya, single linked list terdiri atas 5 unsur dasar sebagai berikut :</p><p>1. Objek node, untuk menyimpan data.</p><p>2. Node kepala(node head), yaitu node pada urutan pertama di dalam list.</p><p>3. Node ekor(node tail), yaitu node pada urutan terakhir dalam list.</p><p>4. Node link/pointer, untuk menandai objek node selanjutnya dari posisi node sekarang.</p><p>5. Method untuk menambah node, menghapus node, melihat ukuran list, dan sebagainya.</p><p>Setelah memahami strukturnya, maka gunakan struktur data ini untuk membuat program record data nilai siswa.</p><p>Cara kerja program :</p><p>1. Class node akan membentuk objek node dengan data berupa nama siswa.</p><p>2. Class linked list akan membentuk objek list yang terdiri atas beberapa node dan memiliki atribut head, tail, dan size serta memiliki beberapa method sebagai berikut :</p>Method isEmpty akan mengecek ukuran list. Jika size = 0 maka akan menghasilkan nilai true dan jika tidak maka bernilai false.Method tambahData berfungsi untuk menambah node pada bagian belakang list. Jika list masih kosong, maka node akan menjadi kepala(head) sekaligus ekor(tail) dan nilai size ditambah 1. Jika tidak, maka pointer tail akan menunjuk node tersebut, lalu node tersebut akan menjadi tail/ekor.Method hapusData akan menghapus node dengan nama siswa tertentu. Jika list kosong, maka akan dicetak "list kosong". Jika tidak, maka program akan mengecek apakah head = tail (hanya 1 data) dan apakah nilai temp.namaSiswa = nama. Jika benar maka list akan dikosongkan sehingga head = tail = null(kosong). Jika salah, maka program akan mengecek apakah nama = head.namaSiswa, jika benar maka posisi head akan digantikan oleh node berikutnya. Dan jika salah maka program akan melakukan looping sampai temp.pointer.namaSiswa = nama. Setelah berhenti maka temp.pointer yang memiliki data nama siswa yang dimaksud akan dihapus, dan pointer-nya akan diganti dengan node berikutnya. Jika node selanjutnya dari temp.pointer tidak ada, maka akan dikosongkan(null).<p>3. Class menu akan membentuk menu untuk mengoperasikan program record nama siswa. Program akan melakukan looping secara terus menerus untuk melakukan record data sampai user memilih keluar.</p><p><strong>Kode program, pengoperasian dan output-nya dapat dilihat pada lampiran gambar</strong>.</p><p></p>Pelajari lebih lanjut<p>Penerapan algoritma stack dengan java</p>https://brainly.co.id/tugas/27482376<p>Contoh pemrograman pascal</p>https://brainly.co.id/tugas/35223598<p>Contoh pemrograman C++</p>https://brainly.co.id/tugas/23831050<p></p><p>============================</p>Detail Jawaban<p>Kelas : X SMA</p><p>Mapel : TI</p><p>Materi : Mengenal pemrograman komputer</p><p>Kode Kategorisasi : 10.11.6</p><p>Kata Kunci : Struktur data single linked list, bahasa pemrograman java</p><br />
+                                            <h2 class="ez-toc-section" id="singly-linked-list-doubly-linked-list-dan-circular-linked-list-memiliki-perbedaan-pada-proses-kunjungan-tiap-tiap-node-di-dalam-satu-waktu-yang-disebut-proses-a-visitor-b-travel-c-traversal-d-ex">
+                            30. Singly linked list, doubly linked list, dan circular linked list memiliki perbedaan pada proses kunjungan tiap-tiap node di dalam satu waktu yang disebut proses a. visitor b. travel C. traversal d. excursions​</h2><br />
+                        <p>Perbedaan proses kunjungan tiap-tiap node di dalam satu waktu pada singly linked list, doubly linked list, dan circular linked list disebut proses traversal.</p><p></p><p>Jadi, jawabannya adalah: c. traversal.</p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-sebuah-program-python-single-linked-list-yang-dapat-melakukan-operasi-insert-depan-insert-belakang-hapus-depan-hapus-belakang-hapus-semua-tampilkan-data-%e2%80%8b">
+                            31. Buatlah sebuah program python single Linked list yang dapat melakukan operasi Insert Depan, Insert Belakang, Hapus Depan, Hapus Belakang, Hapus semua, Tampilkan Data.​</h2><br />
+                        <p>Program python linked list: class LinkedList:</p><p>   <strong> def __init__(self):</strong></p><p>        self.head = None</p><p>  <strong>  def addStart(self, data):</strong></p><p>        # create a temporary node</p><p>        tempNode = Node(data)</p><p>        tempNode.setLink(self.head)</p><p>        self.head = tempNode</p><p>        del tempNode</p><p>    <strong>def addEnd(self, data):</strong></p><p>        start = self.head</p><p>        tempNode = Node(data)</p><p>        while start.getNextNode():</p><p>            start = start.getNextNode()</p><p>        start.setLink(tempNode)</p><p>        del tempNode</p><p>        return True</p><p>    <strong>def display(self):</strong></p><p>        start = self.head</p><p>        if start is None:</p><p>            print("Empty List!!!")</p><p>            return False</p><p>        while start:</p><p>            print(str(start.getData()), end=" ")</p><p>            start = start.link</p><p>            if start:</p><p>                print("--&gt;", end=" ")</p><p>        print()</p><p><strong>    def length(self):</strong></p><p>        start = self.head</p><p>        size = 0</p><p>        while start:</p><p>            size += 1</p><p>            start = start.getNextNode()</p><p>        # print(size)</p><p>        return size</p><p></p><p> <strong>   def indexing(self, data):</strong></p><p>        start = self.head</p><p>        position = 1</p><p></p><p>        while start:</p><p>            if start.getData() == data:</p><p>                return position</p><p>            else:</p><p>                position += 1</p><p>                start = start.getNextNode()</p><p>   <strong> def removing(self, item):</strong></p><p>        start = self.head</p><p>        previous = None</p><p>        found = False</p><p>        while not found:</p><p>            if start.getData() == item:</p><p>                found = True</p><p>            else:</p><p>                previous = start</p><p>                start = start.getNextNode()</p><p>        if previous is None:</p><p>            self.head = start.getNextNode()</p><p>        else:</p><p>            previous.setLink(start.getNextNode())</p><p>        return found</p><p> <strong>   def Maxim(self):</strong></p><p>        start = self.head</p><p>        largest = start.getData()</p><p>        while start:</p><p>            if largest &lt; start.getData():</p><p>                largest = start.getData()</p><p>            start = start.getNextNode()</p><p>        return largest</p><p><strong>    def Minus(self):</strong></p><p>        start = self.head</p><p>        smallest = start.getData()</p><p>        while start:</p><p>            if smallest &gt; start.getData():</p><p>                smallest = start.getData()</p><p>            start = start.getNextNode()</p><p>        return smallest</p><p><strong>    def pushing(self, data):</strong></p><p>        self.addToEnd(data)</p><p>        return True</p><p><strong>    def popping(self):</strong></p><p>        start = self.head</p><p>        previous = None</p><p>        while start.getNextNode():</p><p>            previous = start</p><p>            start = start.getNextNode()</p><p>        if previous is None:</p><p>            self.head = None</p><p>        else:</p><p>            previous.setLink(None)</p><p>            data = start.getData()</p><p>            del start</p><p>            return data</p><p><strong>    def atIndex(self, position):</strong></p><p>        start = self.head</p><p>        position = int(position)</p><p>        pos = 1</p><p>        while pos != position:</p><p>            start = start.getNextNode()</p><p>            pos += 1</p><p>        data = start.getData()</p><p>        return data</p><p></p><p><strong>    def copy(self):</strong></p><p>        temp = LinkedList()</p><p>        start = self.head</p><p>        temp.addToStart(start.getData())</p><p>        start = start.getNextNode()</p><p>        while start:</p><p>            temp.addToEnd(start.getData())</p><p>            start = start.getNextNode()</p><p>        return temp</p><p>    def clear(self):</p><p>        self.head = None</p><p>        return True</p><p></p><p><strong>    def removePosition(self, position):</strong></p><p>        data = self.atIndex(position)</p><p>        self.remove(data)</p><p>        return data</p><p><strong>    def toString(self, seperator=""):</strong></p><p>        start = self.head</p><p>        finalString = ""</p><p>        while start:</p><p>            tempString = start.getData()</p><p>            finalString += str(tempString)</p><p>            start = start.getNextNode()</p><p>            # if next node exists only the append seperator</p><p>            if start:</p><p>                finalString += seperator</p><p>        return finalString</p><p></p><p><strong>    def count(self, element):</strong></p><p>        start = self.head</p><p>        count1 = 0</p><p>        while start:</p><p>            if start.getData() == element:</p><p>                count1 += 1</p><p>            start = start.getNextNode()</p><p>        return count1</p><p></p><p>    def toList(self):</p><p>        start = self.head</p><p>        tempList = []</p><p>        while start:</p><p>            tempElement = start.getData()</p><p>            tempList.append(tempElement)</p><p>            start = start.getNextNode()</p><p>        return tempList</p><p><strong></strong></p><p><strong>    def toSet(self):</strong></p><p>        start = self.head</p><p>        tempSet = set()</p><p>        while start:</p><p>            tempElement = start.getData()</p><p>            if tempElement not in tempSet:</p><p>                tempSet.add(tempElement)</p><p>            start = start.getNextNode()</p><p>        return tempSet</p><p></p><p><strong>    def reverse(self):</strong></p><p>        start = self.head</p><p>        tempNode = None</p><p>        previousNode = None</p><p></p><p>        while start:</p><p>            tempNode = start.getNextNode()</p><p>            start.setLink(previousNode)</p><p>            previousNode = start</p><p>            start = tempNode</p><p></p><p>        self.head = previousNode</p><p>        return True</p><p></p><p><strong>    def sort(self):</strong></p><p>        start = self.head</p><p>        beginNode = start</p><p>        while beginNode:</p><p>            tempNode = beginNode</p><p>            tempNode2 = beginNode</p><p>            smallest = beginNode.getData()</p><p>            while tempNode:</p><p>                if smallest &gt; tempNode.getData():</p><p>                    smallest = tempNode.getData()</p><p>                    tempNode2 = tempNode</p><p>                tempNode = tempNode.getNextNode()</p><p>            temp = beginNode.getData()</p><p>            beginNode.updateData(tempNode2.getData())</p><p>            tempNode2.updateData(temp)</p><p>            beginNode = beginNode.getNextNode()</p><p></p><p><strong>    def sorted(self):</strong></p><p>        start = self.head</p><p>        tempList = self.copy()</p><p>        tempList.sort()</p><p>        return tempList</p><p><strong>Penjelasan:</strong></p><p><strong>Daftar tertaut atau linked list</strong> ialah suatu  struktur data linier. Tidak seperti array, yang juga merupakan komponen data linier serta campuran, daftar tertaut terbentuk dengan cara dinamis. Saat dimulai program, item daftar tertaut tidak punya suatu data. Elemen dari daftar tertaut (disebut node) dibuat dari waktu ke waktu, layaknya yang ditunjukkan.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut materi tentang penjelassan tentang linked list: https://brainly.co.id/tugas/29298273</p><p></p><p>#BelajarBersamaBrainly</p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-dan-jelaskan-kekurangan-dan-kelebihan-dari-arraylinked-liststackpointerinflix-prefixposefixsortingsearching-tree-dan-quean">
+                            32. Sebutkan dan jelaskan kekurangan dan kelebihan dari array,Linked list,stack,pointer,inflix prefix,posefix,sorting,searching, tree dan quean.</h2><br />
+                        Array adalah sebuah struktur data yang terdiri dari sekumpulan elemen yang memiliki tipe data yang sama dan diurutkan berdasarkan indeksnya. Kelebihan dari array adalah elemen dapat diakses secara langsung menggunakan indeks, sehingga operasi pencarian dan pengurutan dapat dilakukan dengan cepat. Kekurangan dari array adalah ukurannya tidak dapat diubah setelah dideklarasikan, sehingga jika jumlah elemen yang akan disimpan melebihi kapasitas array, maka array tersebut harus dibuat ulang dengan ukuran yang lebih besar.<p></p>Linked list adalah sebuah struktur data yang terdiri dari sekumpulan elemen yang dihubungkan menggunakan pointer. Kelebihan dari linked list adalah ukurannya dapat diubah sesuai kebutuhan, sehingga dapat menyimpan sejumlah elemen yang tidak terbatas. Kekurangan dari linked list adalah operasi pencarian dan pengurutan lebih lambat dibandingkan dengan array, karena elemen tidak disimpan secara berurutan dan harus diakses melalui pointer.<p></p>Stack adalah sebuah struktur data yang menggunakan prinsip Last In First Out (LIFO), yaitu elemen terakhir yang dimasukkan ke dalam stack akan diambil terlebih dahulu. Kelebihan dari stack adalah proses tambah dan hapus elemen (push dan pop) dapat dilakukan dengan cepat dan mudah. Selain itu, stack juga dapat digunakan untuk memecahkan berbagai masalah yang menggunakan prinsip LIFO, seperti pengurutan data atau menyelesaikan masalah pemograman. Kekurangan dari stack adalah hanya elemen terakhir yang dapat diakses, sehingga tidak dapat melakukan operasi pencarian atau pengurutan secara langsung.<br />Pointer adalah suatu konsep dalam pemrograman yang memungkinkan sebuah variabel untuk menyimpan alamat memori suatu nilai. Pointer memiliki beberapa kelebihan, seperti:<br />1. Memudahkan manipulasi data yang ada di memori<br />2. Memungkinkan untuk mengakses data di lokasi memori yang berbeda<br />3. Menjadi solusi untuk beberapa masalah yang tidak dapat diselesaikan dengan cara biasa<br />Namun, pointer juga memiliki beberapa kekurangan, seperti:<br />1. Penggunaan yang tidak tepat dapat menyebabkan kesalahan atau crash pada program<br />2. Dapat memperumit struktur kode dan menjadikannya sulit dibaca oleh orang lain<br />3. Penggunaan yang tidak efisien dapat menyebabkan penggunaan memori yang berlebihan<br />Inflix, prefix, dan postfix merupakan tiga jenis notasi matematika yang berbeda. Inflix adalah notasi yang paling umum digunakan, dimana operator berada di antara operand. Prefix adalah notasi dimana operator berada di depan operand, sedangkan postfix adalah notasi dimana operator berada di belakang operand.<br /><strong>Salah satu kelebihan dari notasi infix adalah bahwa ia mudah dipahami oleh manusia, karena memiliki urutan yang sama seperti bahasa Inggris. Namun, kekurangannya adalah bahwa notasi ini tidak mudah diproses oleh komputer, karena perlu adanya tambahan step untuk mengubah notasi ini menjadi prefix atau postfix sebelum dapat diproses.</strong><br />Prefix dan postfix memiliki kelebihan yang sama, yaitu mudah diproses oleh komputer. Hal ini karena operator selalu berada di depan atau belakang operand, sehingga tidak perlu ada tambahan step untuk mengubah notasi ini menjadi infix sebelum diproses. Namun, kekurangannya adalah bahwa notasi ini kurang mudah dipahami oleh manusia, karena tidak sesuai dengan urutan yang biasa digunakan dalam bahasa Inggris.Sorting merupakan salah satu teknik yang digunakan untuk mengurutkan sekumpulan data ke dalam urutan yang sesuai. Sorting dapat membantu mencari data yang dibutuhkan dengan lebih cepat, menemukan duplikat data, dan mempermudah analisis data. Namun, sorting juga memiliki beberapa kekurangan, seperti membutuhkan banyak waktu dan memori jika jumlah data yang harus diurutkan sangat besar.Searching adalah proses mencari data atau informasi yang dibutuhkan dalam suatu kumpulan data. Searching bisa membantu menemukan data yang dibutuhkan dengan cepat, terutama jika data tersebut terurut. Namun, searching juga memiliki beberapa kekurangan, seperti tidak efektif jika data tidak terurut, dan membutuhkan waktu yang lebih lama jika jumlah data yang harus dicari sangat banyak.Tree adalah struktur data yang digunakan untuk menyimpan dan mengelola data secara hierarkis. Tree memiliki kelebihan dalam hal efisiensi penyimpanan dan pencarian data, serta memungkinkan implementasi berbagai algoritma yang berguna dalam pemrosesan data. Namun, tree juga memiliki beberapa kekurangan, seperti kompleksitas implementasi yang tinggi dan tidak cocok digunakan untuk data yang tidak memiliki hubungan hierarkis.Queue adalah struktur data yang mengikuti aturan first-in-first-out (FIFO). Ini berarti bahwa elemen yang pertama kali masuk ke dalam antrian akan menjadi elemen yang pertama kali keluar dari antrian. Struktur data ini bisa berguna dalam banyak situasi, terutama ketika kita ingin memproses elemen secara berurutan. Contohnya, ketika kita ingin mengantri untuk membeli tiket bioskop, orang yang pertama kali datang akan menjadi orang yang pertama kali mendapatkan tiketnya.<p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="java-susunlah-source-code-program-untuk-menyimpan-data-berikut-ke-dalam-sebuah-linked-list-%e2%80%9cmahasiswa%e2%80%9d-12-3-14-22-7-%e2%80%9crara%e2%80%9d-%e2%80%98%e2%80%99%e2%80%8b">
+                            33. (Java) Susunlah source code program untuk menyimpan data berikut ke dalam sebuah linked list: “Mahasiswa”, 12, 3.14, 22, 7, “Rara”, ‘#’​</h2><br />
+                        <p>import java.util.LinkedList;</p><p></p><p>public class Main {</p><p>    public static void main(String[] args) {</p><p>        LinkedList&lt;Object&gt; linkedList = new LinkedList&lt;&gt;();</p><p></p><p>        linkedList.add("Mahasiswa");</p><p>        linkedList.add(12);</p><p>        linkedList.add(3.14);</p><p>        linkedList.add(22);</p><p>        linkedList.add(7);</p><p>        linkedList.add("Rara");</p><p>        linkedList.add('#');</p><p></p><p>        System.out.println(linkedList);</p><p>    }</p><p>}</p><br />
+                                            <h2 class="ez-toc-section" id="keluaran-dari-kode-berikut-ini-adalah-list-a-b-c-123-for-i-in-rangelenlist-for-j-in-rangellenlisti-printlistijend%e2%80%8b">
+                            34. Keluaran dari kode berikut ini adalah? list = [['a, b, c ],[1,2,3]] for i in range(len(list)): for j in rangellen(list[i])): print(list[i][j],end="")​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Output yang dihasilkan untuk program di atas adalah :</p><p>abc123</p><br />
+                                            <h2 class="ez-toc-section" id="elemen-node-dari-suatu-linked-list-terdiri-dari-2-bagian-yaitu">
+                            35. elemen (node) dari suatu linked list terdiri dari 2 bagian yaitu ....</h2><br />
+                        a) info<br />b) next (linked field/next pointer field)<br />
+                                            <h2 class="ez-toc-section" id="untuk-menyisipkan-node-dalam-linked-list-digunakan-prosedur%e2%80%8b">
+                            36. untuk menyisipkan node dalam linked list digunakan prosedur​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>pembersih</p><p><strong>Penjelasan:</strong></p><p>kaya gitu lah</p><p><strong>Jawaban:</strong></p><p>a) info</p><p>b) next (linked field/next pointer field)</p><p><strong>Penjelasan:</strong></p><p>semoga membantu ya jawabnya</p><br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-menghubungkan-beberapa-simpul-dalam-single-linked-list%e2%80%8b">
+                            37. bagaimana cara menghubungkan beberapa simpul dalam single linked list​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>gataugatau gataugataiavsnobs</p><br />
+                                            <h2 class="ez-toc-section" id="9-jika-tailnull-kondisi-linked-listadalah-a-terisib-penuhc-kosongd-tidak-dapat-ditambahmohon-jawab-ya-kaka%e2%80%8b">
+                            38. 9. Jika tail=null, kondisi Linked Listadalah ....a. terisib. penuhC. kosongd. tidak dapat ditambahmohon jawab ya kaka​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. terisi ok ngertikan</p><br />
+                                            <h2 class="ez-toc-section" id="tahapan-proses-insert-dan-delete-pada-single-linked-list">
+                            39. Tahapan proses insert dan delete pada single linked list</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Single linked list adalah struktur data linear yang terdiri dari simpul atau node yang terhubung satu sama lain melalui tautan atau pointer. Setiap simpul terdiri dari data dan tautan yang menunjuk ke simpul berikutnya. Di bawah ini adalah tahapan proses insert dan delete pada single linked list:</p><p></p><p>1.Insert</p><p>a. Insert pada awal list</p><p></p>Buat simpul baru yang berisi data yang ingin dimasukkanAtur tautan simpul baru agar menunjuk ke simpul awal sebelumnyaAtur simpul awal agar menunjuk ke simpul baru<p>b. Insert pada akhir list</p><p></p>Buat simpul baru yang berisi data yang ingin dimasukkanAtur tautan simpul terakhir agar menunjuk ke simpul baruAtur simpul baru agar menunjuk ke null atau akhir list<p>c. Insert di tengah list</p><p></p>Buat simpul baru yang berisi data yang ingin dimasukkanCari simpul sebelum simpul tempat ingin dimasukkanAtur tautan simpul baru agar menunjuk ke simpul berikutnyaAtur tautan simpul sebelumnya agar menunjuk ke simpul baru<p>2. Delete</p><p>a. Delete pada awal list</p><p></p>Atur simpul awal agar menunjuk ke simpul kedua dalam listHapus simpul pertama<p>b. Delete pada akhir list</p><p></p>Cari simpul sebelum simpul terakhirAtur tautan simpul sebelumnya agar menunjuk ke null atau akhir listHapus simpul terakhir<p>c. Delete di tengah list</p><p></p><p>Cari simpul sebelum simpul yang ingin dihapus</p><p>Atur tautan simpul sebelumnya agar menunjuk ke simpul setelah simpul yang ingin dihapus</p><p>Hapus simpul yang ingin dihapus</p><p>Perlu diingat bahwa saat melakukan insert atau delete pada linked list, perlu diperhatikan apakah linked list tersebut kosong atau tidak. Jika kosong, maka insert harus dilakukan pada awal list, sedangkan delete tidak bisa dilakukan karena tidak ada simpul yang ada di linked list.</p><p></p><p></p><p>#<strong>S</strong><strong>e</strong><strong>m</strong><strong>o</strong><strong>g</strong><strong>a</strong><strong>M</strong><strong>e</strong><strong>m</strong><strong>b</strong><strong>a</strong><strong>n</strong><strong>t</strong><strong>u</strong></p>Jawaban:<br /><br />1. Insert<br />a. Insert di awal linked list: Buat simpul baru dan atur pointer simpul baru ke simpul pertama dari linked list. Kemudian, ubah simpul pertama pada linked list untuk menunjuk ke simpul baru.<br /><br />b. Insert di akhir linked list: Buat simpul baru dan atur pointer simpul terakhir dari linked list untuk menunjuk ke simpul baru.<br /><br />c. Insert di posisi tertentu: Buat simpul baru dan cari simpul sebelum simpul yang akan diinsert. Atur pointer simpul baru untuk menunjuk ke simpul berikutnya. Kemudian, ubah pointer simpul sebelum simpul yang akan diinsert untuk menunjuk ke simpul baru.<br /><br />2. Delete<br />a. Delete di awal linked list: Atur pointer simpul pertama dari linked list untuk menunjuk ke simpul kedua dari linked list.<br /><br />b. Delete di akhir linked list: Cari simpul sebelum simpul terakhir dari linked list. Atur pointer simpul sebelum simpul terakhir untuk menunjuk ke NULL.<br /><br />c. Delete di posisi tertentu: Cari simpul sebelum simpul yang akan dihapus. Atur pointer simpul sebelum simpul yang akan dihapus untuk menunjuk ke simpul berikutnya. Kemudian, hapus simpul yang akan dihapus.<br /><br /><br />Penjelasan: <br />Single linked list adalah salah satu jenis struktur data yang terdiri dari kumpulan simpul-simpul yang dihubungkan satu sama lain dengan menggunakan pointer. Setiap simpul pada single linked list terdiri dari dua bagian yaitu data dan pointer.<br /><br /><br /><br />Jadikan jawaban terbaik yaa!!<br />
+                                            <h2 class="ez-toc-section" id="sebuah-linked-list-mempunyai-sepuluh-simpul-apakah-boleh-langsung-akses-ke-simpul-kelima">
+                            40. Sebuah linked list mempunyai sepuluh simpul. Apakah boleh langsung akses ke simpul kelima?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Tidak bisa karena address simpul dalam linked list tidak saling bersebelahan.</p><p><strong>Penjelasan:</strong></p><p>Struktur data linked list terdiri dari node yang berisi data dan pointer address node berikutnya dan/atau sebelumnya. Untuk mengakses linked list diperlukannya traversal atau dicari satu-satu dimulai dari node terdepan atau terbelakang. Misalkan ada linked list yang terdiri dari 10 node yang dimana data berupa huruf dan alamatnya di dalam kurung:</p><p></p><p>[A(10)]-&gt;[B(12)]-&gt;[C(24)]-&gt;[D(23)]-&gt;[E(14)]-&gt;[F(15)]-&gt;[G(18)]-&gt;[H(13)]-&gt;[I(28)]-&gt;[J(29)]</p><p>head</p><p></p><p>Untuk mengakses node kelima, kita harus mentraverse dari A sampai E karena alamat node E tidak selalu +5 dari node A. Berbeda dengan array yang dapat diakses secara langsung karena alamatnya saling bersebelahan. Misalkan ada array berikut:</p><p>[A,B,C,D,E,F,G,H,I,J]</p><p></p><p>Jika yang ingin diakses adalah array kelima maka kita cukup akses array kelimat dengan cara array[4] atau *(array+4) karena alamat array kelima adalah alamat array pertama + 4.</p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-spelling-bee-tingkat-sma.html">Contoh Soal Spelling Bee Tingkat Sma</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-uts-kelas-5-semester-1.html">Contoh Soal Uts Kelas 5 Semester 1</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/furama-resort-danang.html">Furama Resort Danang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-uts-agama-kelas-7-semester-2.html">Contoh Soal Uts Agama Kelas 7 Semester 2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-teori-atom-dan-pembahasannya.html">Contoh Soal Teori Atom Dan Pembahasannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-hubungan-antar-garis.html">Contoh Soal Hubungan Antar Garis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-tes-masuk-perguruan-tinggi-kebidanan.html">Contoh Soal Tes Masuk Perguruan Tinggi Kebidanan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/brv-vs-veloz.html">Brv Vs Veloz</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-hubungan-sudut-sudut-pada-dua-garis-sejajar.html">Contoh Soal Hubungan Sudut Sudut Pada Dua Garis Sejajar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-tegangan-permukaan.html">Contoh Soal Tegangan Permukaan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/remove-green-screen-in-capcut.html">Remove Green Screen In Capcut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/diatas-ranjang.html">Diatas Ranjang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/keripik-kentang.html">Keripik Kentang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/streaming-drama-korea.html">Streaming Drama Korea</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-sistem-persamaan-dan-pertidaksamaan-linear.html">Contoh Soal Sistem Persamaan Dan Pertidaksamaan Linear</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/nonton-film-jepang.html">Nonton Film Jepang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/jenis-granit.html">Jenis Granit</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-dan-pembahasan-matematika-sma.html">Contoh Soal Dan Pembahasan Matematika Sma</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-dan-pembahasan-tes-toefl.html">Contoh Soal Dan Pembahasan Tes Toefl</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tanyadisini.github.io/contoh-soal-listrik-dinamis-beserta-jawabannya.html">Contoh Soal Listrik Dinamis Beserta Jawabannya</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://tanyadisini.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://tanyadisini.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://tanyadisini.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/1d/a7/d8/1da7d80839196eccc4a624ab91e5ccbf.js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
